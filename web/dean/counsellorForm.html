@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <h2 style="margin-left: 50px">Add New Counsellor</h2>
+<form action="addCounsellor.jsp" method="post">
+    <table style="margin-left: 50px">
+    <tr><td>Counsellor Name:</td><td><input type="text" name="counsname" autocomplete="off" maxlength="60" minlength="5" required/></td></tr>
+<tr><td>Counsellor No.:</td><td>
+        <select name="counsno" required>
+                            <option>Counsellor 1</option>
+                            <option>Counsellor 2</option>
+                            <option>Counsellor 3</option>
+                            <option>Counsellor 4</option>
+                            <option>Counsellor 5</option>
+                            <option>Counsellor 6</option>
+                            <option>Counsellor 7</option>
+                            <option>Counsellor 8</option>
+                        </select>
+                    </td></tr>
+<tr><td>Phone No:</td><td><input type="text" name="phone" maxlength="10" minlength="10" autocomplete="off" required/></td></tr>
+<tr><td>Email:</td><td><input type="email" name="email" minlength="7" maxlength="100" required/></td></tr>
+<tr><td>Gender:</td><td><input type="radio" name="gender" value="male"/>Male <input type="radio" name="gender" value="female"/>Female </td></tr>
+<tr><td>Password:</td><td><input type="password" name="password" minlength="5" maxlength="60" required/></td></tr>
+<tr><td>Status:</td><td>
+        <select name="state" required>
+                            <option>Unknown</option>
+                            <option>Available</option>
+                            <option>Not Available</option>
+                        </select>
+                    </td></tr>
+<tr><td colspan="2"><input type="submit" value="Add Counsellor"/></td></tr>
+</table>
+</form>
+</html>
