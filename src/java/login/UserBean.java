@@ -5,14 +5,23 @@
  */
 package login;
 
-
 public class UserBean {
+
     private String username;
     private String password;
     private String firstName;
     private String lastName;
+    private String fullName;
     private String client;
     public boolean valid;
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 
     public String getUsername() {
         return username;
@@ -45,22 +54,21 @@ public class UserBean {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    
-    public boolean isValid(){
+
+    public boolean isValid() {
         return valid;
     }
 
     public void setValid(boolean valid) {
         this.valid = valid;
     }
-     public String getClient() {
+
+    public String getClient() {
         return client;
     }
 
     public void setClient(String client) {
         this.client = client;
     }
-   
- }
-    
 
+}

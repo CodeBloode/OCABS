@@ -60,7 +60,7 @@
                 <a class="nav-link" href="approveschedules.jsp">Approve Counsellor Schedules</a>
             </li>
             <li class="nav-item">
-                <a href="addCounsellorForm.jsp"> Add New Counsellor</a>
+                <a href="../addCounsellorForm.jsp"> Add New Counsellor</a>
             </li>
             <li class="nav-item">
                 <a  class="nav-link" href="">Logout</a>
