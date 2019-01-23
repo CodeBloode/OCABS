@@ -3,58 +3,56 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package signup;
+package counsellor;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author root
  */
-public class signup extends HttpServlet {
+@WebServlet(name = "CounsellorSignup", urlPatterns = {"/CounsellorSignup"})
+public class CounsellorSignup extends HttpServlet {
 
-    
-    @Override
+   @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            NewUserBean user = new NewUserBean();
+            NewCounsellorBean user = new NewCounsellorBean();
             
-            user.setFirstName(request.getParameter("firstname"));
-            user.setLastName(request.getParameter("lastname"));
+                        
+            user.setFullName(request.getParameter("counsname"));
+            user.setEmail(request.getParameter("email"));
+            user.setGender(request.getParameter("gender"));
+            user.setCounsNo(request.getParameter("counsno"));
+            user.setStatus(request.getParameter("state"));
+            user.setPhone(request.getParameter("phone"));
             user.setPassword(request.getParameter("pwd"));
-            user.setUsername(request.getParameter("regno"));
-           
-            user = NewUserDAO.signup(user);
+            
+            
+            user = NewCounsesellorDAO.signup(user);
             
             if(user.isValid()){
-                
-               response.sendRedirect("login.jsp?account created Successfully");
+               response.sendRedirect("dean/?Counsellor created Successfully");
              
             }else{
-                response.sendRedirect("signup.jsp?unable to create counsellor");            
+                response.sendRedirect("addCounsellor.jsp");            
             }
             
             
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
+            
             ex.printStackTrace();
         }
     }
 
-   
-    @Override
-    public String getServletInfo() {
-        return "Short description of the servel";
-        
-    }// </editor-fold>
+    }
 
-}
+

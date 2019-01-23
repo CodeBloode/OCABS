@@ -37,7 +37,16 @@ public class login extends HttpServlet {
             if(user.isValid()){
                 HttpSession session = request.getSession(true);
                 session.setAttribute("userSession", user);
-                response.sendRedirect("student/");
+                
+                if(request.getParameter("user").equals("student")){
+                    response.sendRedirect("student/");
+                }else
+                    if(request.getParameter("user").equals("counsellor")){
+                       response.sendRedirect("counsellor/");
+                    }else{
+                         response.sendRedirect("dean/");
+                    }
+                
                 
             }else{
                 response.sendRedirect("ErrorPage.jsp");

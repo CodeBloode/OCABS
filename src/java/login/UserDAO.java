@@ -25,17 +25,35 @@ public class UserDAO {
         String password = bean.getPassword();
         String client = bean.getClient();
         
+        //from db
+        String firstName=null;
+        String lastName=null;
+        String pwd=null;
+        String salt=null;
+        String fullName=null;
+
         System.out.println(client);
         
-         if( "student".equals(client)){
-        String searchQuery = "SELECT * FROM student_auth WHERE u_name=?";       
+       
+        String auth_student = "SELECT * FROM student_auth WHERE u_name=?";
+        String auth_counsellor = "SELECT * FROM counsellor_auth where u_name = ?";
+        String auth_dean = "SELECT * FROM dean_auth where u_name = ? ";
                
         
         try{
             //connect to database
             
             currentCon = ConnectionManager.getConnect();
-            stmt = currentCon.prepareStatement(searchQuery);
+            
+            if(client.equals("student")){
+                stmt = currentCon.prepareStatement(auth_student);
+            }else
+               if(client.equals("counsellor")){
+                    stmt = currentCon.prepareStatement(auth_counsellor);
+                }else{
+                   stmt = currentCon.prepareStatement(auth_dean);
+               }
+            
             stmt.setString(1, username);          
             rs = stmt.executeQuery();
             
@@ -46,20 +64,40 @@ public class UserDAO {
                 bean.setValid(false);
                 
             }else{                
-
-                    String firstName= rs.getString("f_name");
-                    String lastName = rs.getString("l_name");
-                    String pwd = rs.getString("pass");
-                    String salt = rs.getString("salt");
-                    boolean verifyPass = EncryptAndDecrypt.verifyUserPassword(password, pwd, salt);
+                
+                if(client.equals("student")){
+                        //student
+                    firstName= rs.getString("f_name");
+                    lastName = rs.getString("l_name");
+                    pwd = rs.getString("pass");
+                    salt = rs.getString("salt");
                     
-                    if(verifyPass){
-                         bean.setFirstName(firstName);
-                         bean.setLastName(lastName);
-                         bean.setValid(true);
+                }else
+                    if(client.equals("counsellor")){
+                        //counsellor
+                    fullName= rs.getString("f_name");
+                    pwd = rs.getString("pass");
+                    salt = rs.getString("salt");
+                        
                     }else{
-                         bean.setValid(false);                   
+                        //dean
+                    firstName= rs.getString("f_name");
+                    lastName = rs.getString("l_name");
+                    pwd = rs.getString("pass");
+                    salt = rs.getString("salt");
+                    
                     }
+                   
+                boolean verifyPass = EncryptAndDecrypt.verifyUserPassword(password, pwd, salt);
+
+                if(verifyPass){
+                     bean.setFirstName(firstName);
+                     bean.setLastName(lastName);
+                     bean.setFullName(fullName);
+                     bean.setValid(true);
+                }else{
+                     bean.setValid(false);                   
+                }
                
             }
         }
@@ -92,11 +130,7 @@ public class UserDAO {
             currentCon = null;
         }
         }
-         }
-        else{
-
-                    bean.setValid(false);
-                }
+         
         return bean;
     }
     

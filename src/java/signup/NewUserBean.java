@@ -1,13 +1,14 @@
-
 package signup;
 
 public class NewUserBean {
+
     private String username;
     private String password;
     private String firstName;
     private String lastName;
- 
     public boolean valid;
+    
+    
 
     public String getUsername() {
         return username;
@@ -44,9 +45,11 @@ public class NewUserBean {
     public void setValid(boolean valid) {
         this.valid = valid;
     }
- 
-    public boolean isValid(){
+
+    public boolean isValid() {
         return valid;
     }
+
+         
     
 }
