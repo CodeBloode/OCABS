@@ -20,6 +20,7 @@ public class NewCounsellorBean {
     private String status;
     public boolean valid;
     private String password;
+    private String confirm_password;
      
 
     public String getUsername() {
@@ -94,8 +95,15 @@ public class NewCounsellorBean {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    
+
+    public String getConfirm_password() {
+        return confirm_password;
+    }
+
+    public void setConfirm_password(String confirm_password) {
+        this.confirm_password = confirm_password;
+    }
+        
     
     
 }

@@ -6,7 +6,16 @@ public class NewUserBean {
     private String password;
     private String firstName;
     private String lastName;
+    private String pass2;
     public boolean valid;
+
+    public String getPass2() {
+        return pass2;
+    }
+
+    public void setPass2(String pass2) {
+        this.pass2 = pass2;
+    }
     
     
 

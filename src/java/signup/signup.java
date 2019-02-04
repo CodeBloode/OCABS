@@ -6,14 +6,13 @@
 package signup;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 
 /**
  *
@@ -21,26 +20,37 @@ import javax.servlet.http.HttpSession;
  */
 public class signup extends HttpServlet {
 
+     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        request.getRequestDispatcher("signup.jsp").forward(request, response);
+    }
+    
+    
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
             NewUserBean user = new NewUserBean();
-            
             user.setFirstName(request.getParameter("firstname"));
             user.setLastName(request.getParameter("lastname"));
             user.setPassword(request.getParameter("pwd"));
             user.setUsername(request.getParameter("regno"));
-           
-            user = NewUserDAO.signup(user);
+            user.setPass2(request.getParameter("cpwd"));
+            user = NewUserDAO.signup(user);            
             
             if(user.isValid()){
                 
-               response.sendRedirect("login.jsp?account created Successfully");
+               //request.getRequestDispatcher("").forward(request,response);//
+               response.sendRedirect("login");
              
             }else{
-                response.sendRedirect("signup.jsp?unable to create counsellor");            
+                               
+                
+                 response.sendRedirect("signup");
+        
             }
             
             
@@ -53,7 +63,7 @@ public class signup extends HttpServlet {
    
     @Override
     public String getServletInfo() {
-        return "Short description of the servel";
+        return "just signup";
         
     }// </editor-fold>
 

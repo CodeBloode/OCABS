@@ -21,6 +21,15 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "CounsellorSignup", urlPatterns = {"/CounsellorSignup"})
 public class CounsellorSignup extends HttpServlet {
 
+      @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        request.getRequestDispatcher("dean/addCounsellorForm.jsp").forward(request, response);
+    }
+    
+    
+    
    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -35,6 +44,7 @@ public class CounsellorSignup extends HttpServlet {
             user.setStatus(request.getParameter("state"));
             user.setPhone(request.getParameter("phone"));
             user.setPassword(request.getParameter("pwd"));
+            user.setConfirm_password(request.getParameter("cpwd"));
             
             
             user = NewCounsesellorDAO.signup(user);
@@ -43,7 +53,7 @@ public class CounsellorSignup extends HttpServlet {
                response.sendRedirect("dean/?Counsellor created Successfully");
              
             }else{
-                response.sendRedirect("addCounsellor.jsp");            
+                response.sendRedirect("CounsellorSignup?unable to add counsellor");            
             }
             
             
@@ -52,6 +62,8 @@ public class CounsellorSignup extends HttpServlet {
             ex.printStackTrace();
         }
     }
+    
+    
 
     }
 

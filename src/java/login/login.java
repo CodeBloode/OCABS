@@ -20,6 +20,13 @@ import javax.servlet.http.HttpSession;
  */
 public class login extends HttpServlet {
 
+    
+     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        request.getRequestDispatcher("login.jsp").forward(request, response);
+    }
  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -49,7 +56,13 @@ public class login extends HttpServlet {
                 
                 
             }else{
-                response.sendRedirect("ErrorPage.jsp");
+                   
+                if(user.getClient().equals("unknown")){
+                    response.sendRedirect("login");
+                }else{
+                    response.sendRedirect("loginError");
+                }
+                    
             }
             
             
