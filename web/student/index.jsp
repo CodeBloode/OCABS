@@ -34,13 +34,15 @@
         <jsp:include page="../includes/authenticatednav.html"/>
         <br><br><br><br>
         
-        <%--<jsp:useBean id= "currentUser" class = "login.UserBean" scope="session"/>--%>
-            
+      
            
             <% UserBean currentUser = ((UserBean)(session.getAttribute("userSession")));%>
         <h1> Welcome <%= currentUser.getFirstName() + " " + currentUser.getLastName() %> </h1>
          
+         
+         <div class="fixed-bottom">
          <jsp:include page="../includes/footer.jsp" />
+         </div>
             
         </div>
 <!--     Optional JavaScript 
