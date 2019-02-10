@@ -176,6 +176,7 @@ $(document).ready(function(){
         </form>
     </div>
 </div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer">
     <jsp:include page="../includes/footer.jsp"/> 
 </div>

@@ -61,7 +61,7 @@
                 <a class="nav-link" href="index.jsp">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="viewsessions.jsp">Appointments</a>
+                <a class="nav-link active" href="viewsessions.jsp">View Appointments</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="approveschedules.jsp">Approve Schedules</a>
@@ -149,8 +149,8 @@ $(document).ready(function(){
     </form>
     </div>
     </div>
-</body>>
-
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer">
     <jsp:include page="../includes/footer.jsp"/>
     </div>

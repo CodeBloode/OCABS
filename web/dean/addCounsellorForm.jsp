@@ -47,9 +47,9 @@
 
                 <div id="navigation">
                     <ul>
-                        <li><a href="dean/" class="active">Home</a></li>
+                        <li><a href="index.jsp" class="active">Home</a></li>
                         <li><a href="">View All Counsellors</a></li>
-                        <li><a href="CounsellorSignup">Add New Counsellor</a></li>
+                        <li><a href="addCounsellorForm.jsp">Add New Counsellor</a></li>
 
 
                     </ul>
