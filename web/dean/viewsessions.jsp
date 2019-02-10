@@ -31,27 +31,20 @@
 
 
      <!-- SCRIPTS -->
-<script type="text/javascript" src="bootstrap1/bootstrapjs/bootstrap.bundle.js"></script>
-<script type="text/javascript" src="bootstrap1/bootstrapjs/bootstrap.min.js"></script>
-<script type="text/javascript" src="bootstrap1/bootstrapjs/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="bootstrap1/bootstrapjs/bootstrap.js"></script>
-<script type="text/javascript" src="bootstrap1/bootstrapjs/mdb.min.js"></script>
-<script type="text/javascript" src="bootstrap1/bootstrapjs/popper.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="bootstrap1/bootstrapcss/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="bootstrap1/bootstrapcss/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap1/bootstrapcss/bootstrap-grid.css">
-<link rel="stylesheet" type="text/css" href="bootstrap1/bootstrapcss/bootstrap-grid.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap1/bootstrapcss/bootstrap-reboot.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap1/bootstrapcss/font-awesome.min.css"> 
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-reboot.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/font-awesome.min.css">
              <!-- MDB core JavaScript -->
-<link rel="stylesheet" type="text/css" href="bootstrap1/bootstrapcss/mdb.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">
 
-
-        <link  rel="stylesheet" href="css/stylelogin.css" type="text/css" media="all">
+        <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all">
 
             <!-- Material Design Bootstrap -->
-    <link href="bootstrap1/bootstrapcss/mdb.min.css" rel="stylesheet">
+    <link href="../bootstrap1/bootstrapcss/mdb.min.css" rel="stylesheet">
 
 
 
@@ -65,7 +58,7 @@
     <nav class="navbar navbar-expand-md ">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="dean/index.jsp">Home</a>
+                <a class="nav-link" href="index.jsp">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="viewsessions.jsp">Appointments</a>
@@ -107,7 +100,7 @@ $(document).ready(function(){
 
 })
     </script>
-        <button type="submit" name="get"><span>Search <img src="images/search.png" title="" alt="" height="17" width="17" /></span></button> <br><br><br>
+        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button> <br><br><br>
     </form>
 
     <br><br>
@@ -159,7 +152,7 @@ $(document).ready(function(){
 </body>>
 
 <div class="footer">
-    <jsp:include page="includes/footer.jsp"/>
+    <jsp:include page="../includes/footer.jsp"/>
     </div>
 </body>
 </HTML>

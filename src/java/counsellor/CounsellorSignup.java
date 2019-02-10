@@ -50,7 +50,7 @@ public class CounsellorSignup extends HttpServlet {
             user = NewCounsesellorDAO.signup(user);
             
             if(user.isValid()){
-               response.sendRedirect("dean/?Counsellor created Successfully");
+               response.sendRedirect("CounsellorSignup?Counsellor Added Successfully");
              
             }else{
                 response.sendRedirect("CounsellorSignup?unable to add counsellor");            

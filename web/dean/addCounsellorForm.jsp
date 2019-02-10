@@ -25,9 +25,37 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style> 
+            #navigation ul li{
+                display: inline-block;
+                padding: 0px 5px;
+            }
+            #navigation ul li a{
+                color:#fff;
+                text-decoration: none;
+            }
+            #navigation {
+                background: #4062b7;
+                padding: 3px 0px
+            }
+        </style>
 </head>
 <body style="background-color: whitesmoke">
-<%@ include file="header.html" %>
+    <div id="header">
+            <div class="shell">
+
+                <div id="navigation">
+                    <ul>
+                        <li><a href="dean/" class="active">Home</a></li>
+                        <li><a href="">View All Counsellors</a></li>
+                        <li><a href="CounsellorSignup">Add New Counsellor</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 <!--<p style="background-color: lightgreen;">Record successfully saved!</p>-->
 <jsp:include page="counsellorForm.html"></jsp:include>
