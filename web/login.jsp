@@ -4,7 +4,36 @@
     Author     : root
 --%>
 
-<%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html" pageEncoding="UTF-8" import="login.login"%>
+<%
+    Cookie cookie  = null;
+    Cookie [] cookies = null;
+    
+    String userCookieName = "usernameCookie";
+    String userCookieValue = "";
+    String passwordCookieName = "passwordCookie";
+    String passwordCookieValue = "";
+    
+    cookies = request.getCookies();
+    
+
+         if( cookies != null ) {
+                      
+            for (int i = 0; i < cookies.length; i++) {
+               cookie = cookies[i];
+               if (userCookieName.equals(cookie.getName())){
+                   userCookieValue = cookie.getValue();
+               }
+               if(passwordCookieName.equals(cookie.getName())){
+                   passwordCookieValue = cookie.getValue();
+               }
+                    
+            }
+         } else {
+            userCookieValue = "";
+            passwordCookieValue = "";
+         }
+%>
 <!DOCTYPE html>
 
 <html>
@@ -46,7 +75,7 @@
               
                 <div class="form-group">
                   <label for="username" class="font-weight-bolder">Username</label>
-                  <input type="text" class="form-control" id="username"  name="username">
+                  <input type="text" class="form-control" id="username"  name="username" value="<%=userCookieValue%>">
                   <small id="username" class="form-text text-muted"><ul>
                           <li>For student use registartion numbers</li>
                           <li>For counsellors use consellor number you were assigned</li>
@@ -57,7 +86,7 @@
                 </div>
                 <div class="form-group">
                   <label for="InputPassword1" class="text-left font-weight-bolder">Password</label>
-                  <input type="password" class="form-control" id="InputPassword1" name="pwd">
+                  <input type="password" class="form-control" id="InputPassword1" name="pwd" value="<%=passwordCookieValue%>">
                 </div>
                 
                 
@@ -65,7 +94,7 @@
                     <div>
                         <!-- Remember me -->
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="rememberme" value="yes" name="rem">
+                            <input type="checkbox" class="custom-control-input" id="rememberme" name="rem">
                             <label class="custom-control-label" for="rememberme">Remember me</label>
                         </div>
                     </div>

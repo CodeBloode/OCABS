@@ -31,8 +31,9 @@
 
   <body>
       <jsp:include page="includes/nav.html"/>
+      <br> <br>
        
-    <div>
+    <div class="mt-2">
         
         <div class="row">
             <div class="col-md-12">
