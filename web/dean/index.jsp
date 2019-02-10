@@ -20,15 +20,15 @@
 
         <!-- SCRIPTS -->
 
-<!--<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-reboot.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-reboot.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/font-awesome.min.css">
-              MDB core JavaScript 
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">-->
+             <!-- MDB core JavaScript -->
+<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">
 
 
     <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all"> 

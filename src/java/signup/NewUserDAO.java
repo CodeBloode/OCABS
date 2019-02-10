@@ -32,7 +32,7 @@ public class NewUserDAO {
          String securePass = EncryptAndDecrypt.generateSecurePassword(password, salt);
          
          
-         String insertQuery = "INSERT INTO student_auth (f_name,l_name,u_name, pass, salt,day) VALUES (?,?,?,?,?,NOW())";
+         String insertQuery = "INSERT INTO dean_auth (f_name,l_name,u_name, pass, salt,day) VALUES (?,?,?,?,?,NOW())";
          
          
          if(!password.equals(pass2))
