@@ -45,7 +45,7 @@
     </div>
 
     <label for="regnumber" class="font-weight-bolder">Reg No</label>
-    <input type="text" id="regnumber" class="form-control mb-4">
+    <input type="text" id="regnumber" class="form-control mb-4" name="regno">
      
 
    <label for="password" class="font-weight-bolder">Password</label>
