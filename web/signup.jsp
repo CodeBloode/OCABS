@@ -44,25 +44,29 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <label for="regnumber" class="font-weight-bolder">Reg No</label>
+=======
+    <label for="regnumber" class="font-weight-bolder">Username</label>
+>>>>>>> 5cee6c7ec3ceba6fa62e3b32df5fee74cb9437e6
     <input type="text" id="regnumber" class="form-control mb-4" name="regno">
      
 
    <label for="password" class="font-weight-bolder">Password</label>
-    <input type="password" id="password" class="form-control" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="pwd" required minlength="8">
+   <input type="password" id="password" class="form-control" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="pwd" required minlength="9" maxlength="60">
     <small id="password" class="form-text text-muted mb-4">
         At least 8 characters and 1 digit
     </small>
 
     <label for="confirmpassword" class="font-weight-bolder">Confirm Password</label>
-    <input type="password" id="confirmpassword" class="form-control" aria-describedby="defaultRegisterFormPhoneHelpBlock" name="cpwd">
+    <input type="password" id="confirmpassword" class="form-control" aria-describedby="defaultRegisterFormPhoneHelpBlock" name="cpwd" required="required" minlength="9" maxlength="60"a>
     <small id="confirmpassword" class="form-text text-muted mb-4">
         same as your password
     </small>
 
    
     <!-- Sign up button -->
-    <button class="btn btn-info my-4 btn-block"  onclick="validate()" type="submit">Sign in</button>
+    <button class="btn btn-info my-4 btn-block"  onclick="validate()" type="submit">Submit</button>
 
    
 

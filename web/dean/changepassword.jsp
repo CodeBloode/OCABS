@@ -20,17 +20,38 @@
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/font-awesome.min.css">
              <!-- MDB core JavaScript -->
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">
-
-
-<!--    <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all"> -->
-
-            <!-- Material Design Bootstrap -->
-    <link href="../bootstrap1/bootstrapcss/mdb.min.css" rel="stylesheet">
-
+<style> 
+            #navigation ul li{
+                display: inline-block;
+                padding: 0px 5px;
+            }
+            #navigation ul li a{
+                color:#fff;
+                text-decoration: none;
+            }
+            #navigation {
+                background: #4062b7;
+                padding: 3px 0px
+            }
+        </style>
 
     </head>
     <body>
-<%@ include file="header.html" %>  <br>
+<div id="header">
+            <div class="shell">
+
+                <div id="navigation">
+                    <ul>
+                        <li><a href="index.jsp" class="active">Home</a></li>
+                        <li><a href="">View All Counsellors</a></li>
+                        <li><a href="addCounsellorForm.jsp">Add New Counsellor</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
  
 <div style="margin-left: 40px">
 <h3>Dean Password Change.</h3>
@@ -46,6 +67,7 @@
             <input type="submit" name="change" value="Change Password">
         </form>
     </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
         <div class="footer">
            <jsp:include page="../includes/footer.jsp"/> 
         </div>

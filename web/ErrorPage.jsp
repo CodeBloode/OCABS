@@ -30,7 +30,7 @@
         </div>
         <div class="container mt-7">
             <br/><br/><br/><br/>
-        <h5 class="h5">Username or password error or You are trying to log in as a wrong user.<br>please retry to <a href="login.jsp" class="blue-text">login</a> again</h5>
+        <h5 class="h5">Username or password invalid!! <br>please retry to <a href="login.jsp" class="blue-text">login</a> again</h5>
        
         <div class="fixed-bottom">
          <jsp:include page="includes/footer.jsp"/>
