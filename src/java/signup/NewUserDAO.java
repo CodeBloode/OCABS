@@ -25,6 +25,8 @@ public class NewUserDAO {
          String firstname = bean.getFirstName();
          String lastname = bean.getLastName();
          String pass2 = bean.getPass2();
+         String email = bean.getEmail();
+         String phone = bean.getPhone();
          
          
              
@@ -32,7 +34,7 @@ public class NewUserDAO {
          String securePass = EncryptAndDecrypt.generateSecurePassword(password, salt);
          
          
-         String insertQuery = "INSERT INTO dean_auth (f_name,l_name,u_name, pass, salt,day) VALUES (?,?,?,?,?,NOW())";
+         String insertQuery = "INSERT INTO student_auth (f_name,l_name,u_name, pass, salt,day,email,phone) VALUES (?,?,?,?,?,NOW(),?,?)";
          
          
          if(!password.equals(pass2))
@@ -55,6 +57,8 @@ public class NewUserDAO {
                        insert.setString(3, username);
                        insert.setString(4, securePass);
                        insert.setString(5, salt);
+                       insert.setString(6, email);
+                       insert.setString(7, phone);
 
                     run = insert.executeUpdate();
 

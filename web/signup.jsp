@@ -57,13 +57,21 @@
         </div>
     </div>
 
-<<<<<<< HEAD
+
     <label for="regnumber" class="font-weight-bolder">Reg No</label>
-=======
-    <label for="regnumber" class="font-weight-bolder">Username</label>
->>>>>>> 5cee6c7ec3ceba6fa62e3b32df5fee74cb9437e6
+
     <input type="text" id="regnumber" class="form-control mb-4" name="regno">
      
+      <div class="form-row mb-4">
+        <div class="col">
+             <label for="email" class="font-weight-bolder">Email</label>
+            <input type="email" id="email" class="form-control" name="email">
+        </div>
+        <div class="col">
+               <label for="phone" class="font-weight-bolder">Phone Number</label>
+            <input type="text" id="phone" class="form-control"  name="phone">
+        </div>
+    </div>
 
    <label for="password" class="font-weight-bolder">Password</label>
    <input type="password" id="password" class="form-control" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="pwd" required minlength="9" maxlength="60">
@@ -79,7 +87,7 @@
 
    
     <!-- Sign up button -->
-    <button class="btn btn-info my-4 btn-block"  onclick="validate()" type="submit">Submit</button>
+    <button class="btn btn-info my-4 btn-block"  onclick="validate()" type="submit">Create Account</button>
 
    
 

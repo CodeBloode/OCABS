@@ -34,14 +34,14 @@ public class changepassword extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("servlet running");
+        System.out.println("servlet running...");
         
         ChangePasswordBean changepass = new ChangePasswordBean();
         
         changepass.setOldPassword(request.getParameter("pwd"));
         changepass.setNewPassword1(request.getParameter("newpwd"));
         
-          UserBean user = new UserBean();
+        //  UserBean user = new UserBean();
           HttpSession session = request.getSession(true);
          
           String username = session.getAttribute("userSession1").toString();

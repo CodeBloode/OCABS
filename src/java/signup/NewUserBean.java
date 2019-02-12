@@ -6,6 +6,8 @@ public class NewUserBean {
     private String password;
     private String firstName;
     private String lastName;
+    private String phone;
+    private String email;
     private String pass2;
     public boolean valid;
 
@@ -59,6 +61,23 @@ public class NewUserBean {
         return valid;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    
          
     
 }

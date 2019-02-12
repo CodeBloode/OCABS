@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <!-- Font Awesome -->
+
+
 <link rel="stylesheet" type="text/css" href="cdn/all.css">
 <link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="cdn/buttons.bootstrap.min.js">
@@ -33,6 +36,7 @@
         <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">-->
         
 <!--         Font Awesome 
+>>>>>>> cef01df79c3dbb2541858446c1a4db2a0ebaeaa9
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
  Bootstrap core CSS 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +44,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">-->
 
         <link rel="stylesheet" href="css/coverstyle.css">
-    <title>Home</title>
+    <title>OCABS|LandingPage</title>
   </head>
     
 
