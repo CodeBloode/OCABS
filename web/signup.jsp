@@ -57,7 +57,11 @@
         </div>
     </div>
 
+<<<<<<< HEAD
+    <label for="regnumber" class="font-weight-bolder">Reg No</label>
+=======
     <label for="regnumber" class="font-weight-bolder">Username</label>
+>>>>>>> 5cee6c7ec3ceba6fa62e3b32df5fee74cb9437e6
     <input type="text" id="regnumber" class="form-control mb-4" name="regno">
      
 
