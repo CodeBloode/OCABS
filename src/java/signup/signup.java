@@ -34,11 +34,15 @@ public class signup extends HttpServlet {
             throws ServletException, IOException {
         try {
             NewUserBean user = new NewUserBean();
+            
             user.setFirstName(request.getParameter("firstname"));
             user.setLastName(request.getParameter("lastname"));
             user.setPassword(request.getParameter("pwd"));
             user.setUsername(request.getParameter("regno"));
             user.setPass2(request.getParameter("cpwd"));
+            user.setEmail(request.getParameter("email"));
+            user.setPhone(request.getParameter("phone"));
+            
             user = NewUserDAO.signup(user);            
             
             if(user.isValid()){

@@ -79,7 +79,7 @@ public class login extends HttpServlet {
                    
                     
                     if(request.getParameter("user").equals("student")){
-                          response.sendRedirect("student/");
+                          response.sendRedirect("studenthome?logged in as student");
                         }else
                             if(request.getParameter("user").equals("counsellor")){
                                response.sendRedirect("counsellor/");
@@ -90,7 +90,7 @@ public class login extends HttpServlet {
                 }else{
                     
                      if(request.getParameter("user").equals("student")){
-                          response.sendRedirect("student/");
+                          response.sendRedirect("studenthome?logged in as student");
                         }else
                             if(request.getParameter("user").equals("counsellor")){
                                response.sendRedirect("counsellor/");
