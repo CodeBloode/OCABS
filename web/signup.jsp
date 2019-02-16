@@ -12,66 +12,111 @@
         <title>Signup</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.colVis.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.html5.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.print.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/dataTables.bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/dataTables.buttons.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/jquery-3.3.1.js">
+<link rel="stylesheet" type="text/css" href="cdn/jquery.dataTables.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/jszip.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/mdb.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/vfs_fonts.js">
+<!--         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
          <link rel="stylesheet" href="css/coverstyle.css">
          <link href="//fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700&subset=latin-ext,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
-         <link rel="stylesheet" href="bootstrap/css/mdb.min.css">
+         <link rel="stylesheet" href="bootstrap/css/mdb.min.css">-->
+
+<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+ Bootstrap core CSS 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+ Material Design Bootstrap 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">-->
     </head>
     <body>
         <jsp:include page="includes/nav.html"/>
-        <div class="col-md-4 offset-4">
+        <div class="col-md-5 offset-4">
             <br> <br><br> <br>
-            <form action="signup" Method="POST">
-                <h2 class="h2-responsive text-center mt-2"> Signup</h2>
-                <table border="0" cellspacing="3" cellpadding="5">
-                    <tbody>
-                        <tr>
-                            
-                        </tr>
-                        <tr>
-                            <td>First Name </td>
-                            <td>
-                                 <input type="text" class="form-group" name="firstname" placeholder="First Name" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Last Name</td>
-                            <td>
-                                 <input type="text" class="form-group" name="lastname" placeholder="Last Name" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Reg Number</td>
-                            <td>
-                                 <input type="text" class="form-group" name="regno" placeholder="Reg No" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Password</td>
-                            <td>
-                                <input type="password" class="form-group" name="pwd" placeholder="Password" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Confirm Password</td>
-                            <td>
-                                <input type="password" class="form-group" name="cpwd" placeholder="Confirm Password" required>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br> <br>
-                <input type="submit" onclick="validate()" class="btn btn-primary" value="Signup">
+            
+         
+<form class=" border border-light p-5" action="signup" Method="POST" name="form">
+    
+    <p class="h4 mb-4 text-center">Signup</p>
 
-         </form>
+    <div class="form-row mb-4">
+        <div class="col">
+             <label for="firstname" class="font-weight-bolder">First Name</label>
+            <input type="text" id="firstname" class="form-control" name="firstname" required>
+        </div>
+        <div class="col">
+               <label for="lastname" class="font-weight-bolder">Last Name</label>
+            <input type="text" id="lastname" class="form-control"  name="lastname" required>
+        </div>
+    </div>
+
+
+    <label for="regnumber" class="font-weight-bolder">Reg No</label>
+
+    <input type="text" id="regnumber" class="form-control mb-4" name="regno">
+     
+      <div class="form-row mb-4">
+        <div class="col">
+             <label for="email" class="font-weight-bolder">Email</label>
+            <input type="email" id="email" class="form-control" name="email">
+        </div>
+        <div class="col">
+               <label for="phone" class="font-weight-bolder">Phone Number</label>
+            <input type="text" id="phone" class="form-control"  name="phone">
+        </div>
+    </div>
+
+   <label for="password" class="font-weight-bolder">Password</label>
+   <input type="password" id="password" class="form-control" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="pwd" required minlength="9" maxlength="60">
+    <small id="password" class="form-text text-muted mb-4">
+        At least 8 characters and 1 digit
+    </small>
+
+    <label for="confirmpassword" class="font-weight-bolder">Confirm Password</label>
+    <input type="password" id="confirmpassword" class="form-control" aria-describedby="defaultRegisterFormPhoneHelpBlock" name="cpwd" required="required" minlength="9" maxlength="60"a>
+    <small id="confirmpassword" class="form-text text-muted mb-4">
+        same as your password
+    </small>
+
+   
+    <!-- Sign up button -->
+    <button class="btn btn-info my-4 btn-block"  onclick="validate()" type="submit">Create Account</button>
+
+   
+
+</form>
+
+          
+            
+            <script>
+               function validate(){
+                    var pass = document.forms["form"]["pwd"].value;
+                    var pass1 = document.forms["form"]["cpwd"].value;
+                    if(pass !== pass1 ){
+                        
+                        alert("Passwords do not march");
+                        
+                        return false
+                    }
+                }
+            </script>
+       
+        </div>
+            
          <jsp:include page="includes/footer.jsp" />
             
-        </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <script src="bootstrap/js/jquery-3.3.1.min"></script>
+<!--     Optional JavaScript 
+     jQuery first, then Popper.js, then Bootstrap JS 
+     <script src="bootstrap/js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-        
+        -->
     </body>
 </html>

@@ -12,10 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
-    <link rel="stylesheet" href="../css/datepicker.css">
-    <script type="text/javascript" src="../js/bootstrap-datepicker.js"></script>
-    <title>Schedules</title>
-
+    <link rel="stylesheet" href="css/datepicker.css">
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.css">
@@ -32,31 +31,48 @@
     <link href="../bootstrap/bootstrapcss/mdb.min.css" rel="stylesheet">
 
 
+<link rel="stylesheet" type="text/css" href="cdn/all.css">
+<link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.colVis.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.html5.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.print.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/dataTables.bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/dataTables.buttons.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/jquery-3.3.1.js">
+<link rel="stylesheet" type="text/css" href="cdn/jquery.dataTables.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/jszip.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/mdb.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/vfs_fonts.js">
 
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Schedules</title>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script>
 
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+
+  </script>
 </head>
 <body>
-<div class="topnav" style="background-color: forestgreen">
+<div class="topnav" style="background-color: #4062b7">
     <nav class="navbar navbar-expand-md ">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link " href="deanhomepage.jsp">Home</a>
+                <a class="nav-link " href="index.jsp">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="viewsessions.jsp"> Views Session </a>
+                <a class="nav-link " href="viewsessions.jsp">Views Session </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="approveschedules.jsp">Approve Schedules</a>
 
-<!--            <li class="nav-item">
-                <a href=""> New Counsellor</a>
-            </li>
-            <li class="nav-item">
-                <a  class="nav-link" href="">Logout</a>
-            </li>
--->
         </ul>
     </nav>
 
@@ -67,9 +83,9 @@
 <br><br>
 <div>
     <form action="#" method="get">
-        <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off">
+        <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
         
-        <input type="text" name="to" placeholder="To" id="to" autocomplete="off">
+        <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
     <script type="text/javascript">
 
 $(document).ready(function(){
@@ -96,7 +112,7 @@ $(document).ready(function(){
     <form action="" method="get">
         <h4>Print Schedule for Away Counsellors</h4>
 
-    <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off">
+        <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off" readonly="readonly">
     <script type="text/javascript">
 
         $(document).ready(function(){
@@ -112,7 +128,7 @@ $(document).ready(function(){
 
         })
     </script>
-    <input type="text"  name="to" placeholder="To" id="to1" autocomplete="off">
+    <input type="text"  name="to" placeholder="To" id="to1" autocomplete="off" readonly="readonly">
     <script type="text/javascript">
 
         $(document).ready(function(){
@@ -152,7 +168,7 @@ $(document).ready(function(){
             </select>
             <br>
 
-            <input type="text" id= "from2" name="from" placeholder="Date Away" autocomplete="off">
+            <input type="text" id= "from2" name="from" placeholder="Date Away" autocomplete="off" readonly="readonly">
             <script type="text/javascript">
 
                 $(document).ready(function(){
@@ -173,6 +189,7 @@ $(document).ready(function(){
         </form>
     </div>
 </div>
+<br><br><br><br><br><br><br><br><br>
 <div class="footer">
     <jsp:include page="../includes/footer.jsp"/> 
 </div>

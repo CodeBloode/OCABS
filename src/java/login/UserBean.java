@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package login;
+import java.io.Serializable;
 
-public class UserBean {
+public class UserBean implements Serializable{
 
     private String username;
     private String password;
@@ -14,6 +15,7 @@ public class UserBean {
     private String fullName;
     private String client;
     public boolean valid;
+
 
     public String getFullName() {
         return fullName;

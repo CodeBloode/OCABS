@@ -33,44 +33,58 @@ public class NewCounsesellorDAO {
          String status = bean.getStatus();
          String counsNo = bean.getCounsNo();
          String password = bean.getPassword();
+         String confirm_password = bean.getConfirm_password();
           
          String salt= EncryptAndDecrypt.getSalt(30);
          String securePass = EncryptAndDecrypt.generateSecurePassword(password, salt);
-         
+            System.out.println("User Name: " +username);
+            System.out.println("Full Name: " +fullname);
+            System.out.println("Email: " +email);
+            System.out.println("gender: " +gender);
+            System.out.println("Phone: " +phone);
+            System.out.println("Status: " +status);
+            System.out.println("CounseNo: "+counsNo);
+            System.out.println("Password: "+password);
          
         
          String insertQueryCounsellor = "INSERT INTO counsellor_auth (f_name,email,gender,phone,status,u_name, pass, salt,day) VALUES (?,?,?,?,?,?,?,?,NOW())";
          
-         try{
+         if(!password.equals(confirm_password)){
+             bean.setValid(false);
+             System.out.println("Password match error");
+         }else{
              
-             
-             connection = ConnectionManager.getConnect();
-             
-                
-                insert = connection.prepareStatement(insertQueryCounsellor);
-                
-                insert.setString(1, fullname);
-                insert.setString(2, email);
-                insert.setString(3, gender);
-                insert.setString(4, phone);
-                insert.setString(5, status);
-                insert.setString(6, counsNo);
-                insert.setString(7, securePass);
-                insert.setString(8, salt);
-                             
-             run = insert.executeUpdate();
-             
-             if(run == 1){
-                  bean.setValid(true);
-             }else{
-                bean.setValid(false);
-             }
-          
-         }catch(SQLException e){
-             
-             
-             
-             System.out.println("Insert Error: "+ e);
+                    try{
+
+
+                        connection = ConnectionManager.getConnect();
+
+
+                           insert = connection.prepareStatement(insertQueryCounsellor);
+
+                           insert.setString(1, fullname);
+                           insert.setString(2, email);
+                           insert.setString(3, gender);
+                           insert.setString(4, phone);
+                           insert.setString(5, status);
+                           insert.setString(6, counsNo);
+                           insert.setString(7, securePass);
+                           insert.setString(8, salt);
+
+                        run = insert.executeUpdate();
+
+                        if(run == 1){
+                             bean.setValid(true);
+                             System.out.println("Data send to db");
+                        }else{
+                           bean.setValid(false);
+                            System.out.println("Failed to send data");
+                        }
+
+                    }catch(SQLException e){
+
+                        System.out.println("Insert Error: "+ e);
+                    }
          }
          return bean;
      }
