@@ -130,6 +130,7 @@ body {
     <nav class="navbar navbar-expand-md ">
       <ul class="navbar-nav ml-auto">
           <!--  
+          
             <li class="nav-item">
                 <a class="nav-link active" href="deanhomepage.jsp">Home</a>
             </li>
@@ -144,8 +145,8 @@ body {
             </li
             <li class="nav-item">
                 <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
-            </li>
-        </ul>
+            </li>  </ul>
+      
     </nav>
     </div>
  

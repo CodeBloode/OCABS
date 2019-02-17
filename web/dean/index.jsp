@@ -176,7 +176,6 @@ body {
      <div class="footer fixed-bottom">
        <jsp:include page="../includes/footer.jsp"/>
     </div>
-
     </body>
 
     </HTML>
