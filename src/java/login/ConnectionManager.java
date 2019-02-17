@@ -19,10 +19,10 @@ public class ConnectionManager {
         
         Class.forName("com.mysql.jdbc.Driver");
         
-        String  url = "jdbc:mysql://localhost:3306/codebloode";
+        String  url = "jdbc:mysql://localhost:3306/codebloode2";
         
         try{
-            con = DriverManager.getConnection(url, "root", "@elvis$");
+            con = DriverManager.getConnection(url, "root", "console");
             
         }
         catch(Exception ex){
