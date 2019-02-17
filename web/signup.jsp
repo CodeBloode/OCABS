@@ -38,10 +38,17 @@
     </head>
     <body>
         <jsp:include page="includes/nav.html"/>
+        <% String messages = request.getAttribute("ErrorMessage").toString();
+            if(messages.equals(null)){
+                messages = "";
+            }
+        %>
         <div class="col-md-5 offset-4">
             <br> <br><br> <br>
             
-         
+            <div class="text-danger text-center"><p><%=messages%></p></div>
+                
+                    
 <form class=" border border-light p-5" action="signup" Method="POST" name="form">
     
     <p class="h4 mb-4 text-center">Signup</p>

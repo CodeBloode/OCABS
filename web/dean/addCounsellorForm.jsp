@@ -69,9 +69,15 @@
                 </div>
             </div>
         </div>
-
+        
 <!--<p style="background-color: lightgreen;">Record successfully saved!</p>-->
-<jsp:include page="counsellorForm.html"></jsp:include>
+<% String messages = request.getAttribute("ErrorMessage").toString();
+            if(messages.equals(null)){
+                messages = "";
+            }
+        %>
+      <div class="text-danger text-center"><p><%=messages%></p></div>
+<jsp:include page="counsellorForm.jsp"></jsp:include>
 <div class="footer">
        <jsp:include page="../includes/footer.jsp"/>
     </div>

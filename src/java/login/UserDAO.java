@@ -105,9 +105,7 @@ public class UserDAO {
              bean.setValid(false);
             
         }
-   
-        
-       // some more exceptions
+         //close exception
         finally{
          if(rs!=null){
              try{

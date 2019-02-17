@@ -21,11 +21,12 @@ import javax.servlet.http.HttpSession;
  */
 public class login extends HttpServlet {
 
-    
+    String messages = "";
      @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        request.setAttribute("messages", messages);
         request.getRequestDispatcher("login.jsp").forward(request, response);
     }
  
@@ -105,9 +106,13 @@ public class login extends HttpServlet {
             }else{
                    
                 if(user.getClient().equals("unknown")){
+                    messages = "select user as Student, Dean or Counselor";
+                    request.setAttribute("messages", messages);
                     response.sendRedirect("login");
                 }else{
-                    response.sendRedirect("loginError");
+                    messages = "Trying to log in as incorrect user or username or password incorrect please retry";
+                    request.setAttribute("messages", messages);
+                    response.sendRedirect("login?Error");
                 }
                     
             }

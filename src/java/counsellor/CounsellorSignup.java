@@ -6,13 +6,15 @@
 package counsellor;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import signup.NewUserDAO;
 
 /**
  *
@@ -20,12 +22,15 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "CounsellorSignup", urlPatterns = {"/CounsellorSignup"})
 public class CounsellorSignup extends HttpServlet {
-
+        String message = "";
+        boolean existinguser = true;
+        
       @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        request.getRequestDispatcher("dean/addCounsellorForm.jsp").forward(request, response);
+            request.setAttribute("ErrorMessage", message);
+            request.getRequestDispatcher("dean/addCounsellorForm.jsp").forward(request, response);
     }
     
     
@@ -46,21 +51,41 @@ public class CounsellorSignup extends HttpServlet {
             user.setPassword(request.getParameter("pwd"));
             user.setConfirm_password(request.getParameter("cpwd"));
             
+             //search for double existing user
+            existinguser = NewUserDAO.searchuser(user.getCounsNo(), "u_name", "counsellor_auth");
             
-            user = NewCounsesellorDAO.signup(user);
-            
-            if(user.isValid()){
-               response.sendRedirect("CounsellorSignup?Counsellor Added Successfully");
-             
+           if(existinguser){
+               // user.setMessages("");
+               message = "The counsellor number has already been assigned please, select a free counselor number";
+               // user.setMessages(message);
+                
+                user.setValid(false);
+                
+                request.setAttribute("ErrorMessage", message);
+                
+                response.sendRedirect("CounsellorSignup?username provided already exists");
+                
             }else{
-                response.sendRedirect("CounsellorSignup?unable to add counsellor");            
-            }
+                    
+                user = NewCounsesellorDAO.signup(user);
+
+                if(user.isValid()){
+                   response.sendRedirect("CounsellorSignup?Counsellor Added Successfully");
+
+                }else{
+                    
+                    message = "unable to create account, check on provided information";
+                    request.setAttribute("ErrorMessage", message);
+                    response.sendRedirect("CounsellorSignup?unable to add counsellor");            
+                }
             
-            
+         } 
         } catch (ClassNotFoundException ex) {
             
             ex.printStackTrace();
-        }
+        }   catch (SQLException ex) {
+                Logger.getLogger(CounsellorSignup.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
     
     

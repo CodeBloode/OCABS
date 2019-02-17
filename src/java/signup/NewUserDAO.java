@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,9 +15,10 @@ public class NewUserDAO {
      static Connection connection = null;
      static ResultSet rs = null;
      public static int run =0;
+     static PreparedStatement insert = null;
      
      public static NewUserBean signup( NewUserBean bean) throws ClassNotFoundException{
-          PreparedStatement insert = null;
+        
           
          //dean and students
          
@@ -44,6 +46,7 @@ public class NewUserDAO {
              
          }else
          {
+             
                 try{
 
 
@@ -78,8 +81,60 @@ public class NewUserDAO {
 
                     System.out.println("Insert Error: "+ e);
                 }
+                
+                finally{
+                    if(rs != null){
+                        try{
+                            rs.close();
+                        }catch(Exception ex1){
+                            rs = null;
+                        }
+                     if(connection != null){
+                         try{
+                             connection.close();
+                         }catch(Exception ex2){
+                             connection =null;
+                         }
+                     }
+                     if(insert != null){
+                         try{
+                             insert.close();
+                         }catch(Exception ex3){
+                             insert =null;
+                         }
+                     }
+                    }
+                }
          }
          return bean;
+     }
+     
+     
+     
+     public static boolean searchuser(String uname, String tablefld, String table)throws ClassNotFoundException, SQLException{
+         boolean exist;
+         String searchquery = "SELECT * FROM "+table+" WHERE "+tablefld+"=?";
+     
+          connection = ConnectionManager.getConnect();
+          insert = connection.prepareStatement(searchquery);
+          insert.setString(1, uname);
+           rs = insert.executeQuery();
+           
+           exist = rs.next();
+           
+           if(exist){
+               
+               exist = true;
+           }else{
+               exist = false;
+           }
+           
+           rs.close();
+           insert.close();
+           connection.close();
+           
+         return exist;
+         
      }
     
 }
