@@ -28,7 +28,7 @@ public class signup extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-         request.setAttribute("ErrorMessage", message);
+        request.setAttribute("ErrorMessage", message);
         request.getRequestDispatcher("signup.jsp").forward(request, response);
         
        
@@ -71,12 +71,13 @@ public class signup extends HttpServlet {
             
             if(user.isValid()){
                 
-               //request.getRequestDispatcher("").forward(request,response);//
+              
                response.sendRedirect("login?account created successul");
              
             }else{
-                               
                 
+                 message = "Unable to create account, check on the information provided";               
+                 request.setAttribute("ErrorMessage", message);
                  response.sendRedirect("signup?unable to create account");
         
             }
