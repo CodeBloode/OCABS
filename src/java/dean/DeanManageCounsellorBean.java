@@ -5,10 +5,7 @@
  */
 package dean;
 
-/**
- *
- * @author Alex
- */
+
 
 public class DeanManageCounsellorBean {
 
