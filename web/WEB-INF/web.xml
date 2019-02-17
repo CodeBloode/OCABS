@@ -105,6 +105,7 @@
     <servlet-mapping>
         <servlet-name>ViewAllCounsellors</servlet-name>
         <url-pattern>/ViewAllCounsellors</url-pattern>
+    </servlet-mapping>    
 
     <servlet-mapping>
         <servlet-name>deanhome</servlet-name>
