@@ -32,8 +32,7 @@ public class UserDAO {
         String salt=null;
         String fullName=null;
 
-        System.out.println(client);
-        
+            
        
         String auth_student = "SELECT * FROM student_auth WHERE u_name=?";
         String auth_counsellor = "SELECT * FROM counsellor_auth where u_name = ?";
@@ -103,11 +102,10 @@ public class UserDAO {
         }
         catch(SQLException ex){
             System.out.println("Login failed there are some errors: "+ ex);
+             bean.setValid(false);
             
         }
-   
-        
-       // some more exceptions
+         //close exception
         finally{
          if(rs!=null){
              try{

@@ -22,8 +22,9 @@ public class ConnectionManager {
         String  url = "jdbc:mysql://localhost:3306/codebloode2";
         
         try{
+
             con = DriverManager.getConnection(url, "root", "console");
-            
+
         }
         catch(Exception ex){
             ex.printStackTrace();

@@ -6,21 +6,35 @@
 package signup;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 
 /**
  *
  * @author root
  */
 public class signup extends HttpServlet {
+    
+    boolean existinguser = true;
+    String message = "";
 
+     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+         request.setAttribute("ErrorMessage", message);
+        request.getRequestDispatcher("signup.jsp").forward(request, response);
+        
+       
+    }
+    
+    
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -32,28 +46,58 @@ public class signup extends HttpServlet {
             user.setLastName(request.getParameter("lastname"));
             user.setPassword(request.getParameter("pwd"));
             user.setUsername(request.getParameter("regno"));
-           
-            user = NewUserDAO.signup(user);
+            user.setPass2(request.getParameter("cpwd"));
+            user.setEmail(request.getParameter("email"));
+            user.setPhone(request.getParameter("phone"));
+            
+            //search for double existing user
+            existinguser = NewUserDAO.searchuser(user.getUsername(), "u_name", "student_auth");
+            
+            if(existinguser){
+               // user.setMessages("");
+               message = "user name provided is already taken";
+               // user.setMessages(message);
+                
+                user.setValid(false);
+                
+                request.setAttribute("ErrorMessage", message);
+                
+                response.sendRedirect("signup?username proided already exists");
+                
+            }else{
+            
+        
+            user = NewUserDAO.signup(user);            
             
             if(user.isValid()){
                 
-               response.sendRedirect("login.jsp?account created Successfully");
+               //request.getRequestDispatcher("").forward(request,response);//
+               response.sendRedirect("login?account created successul");
              
             }else{
-                response.sendRedirect("signup.jsp?unable to create counsellor");            
+                               
+                
+                 response.sendRedirect("signup?unable to create account");
+        
             }
             
-            
+        }
         } catch (ClassNotFoundException ex) {
+            System.out.println("Class not found exception....");
             Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
+            
             ex.printStackTrace();
+        } catch (SQLException ex1) {
+            System.out.println("SQL exception caught....");
+            Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex1);
+             ex1.printStackTrace();
         }
     }
 
    
     @Override
     public String getServletInfo() {
-        return "Short description of the servel";
+        return "just signup";
         
     }// </editor-fold>
 

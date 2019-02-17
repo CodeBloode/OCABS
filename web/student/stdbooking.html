@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-reboot.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-reboot.min.css">
+        <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/font-awesome.min.css">
+
+        <script src="js/jquery.min.js"></script>
+        <script src="../jquery/jquery.min.js"></script>
+
+       
+
+        <script type="text/javascript">
+
+
+           // $(document).ready(function () {
+
+                //DatePicker Example
+                //$('#datetimepicker').datetimepicker(minDate:(2019,1,17));
+               
+
+                //Inline DateTimePicker Example
+
+               // $('#datetimepicker2').datetimepicker({
+                  //  beforeShowDay: $.datepicker.noWeekends,
+                    //format: 'd-m-Y H:i ',
+                    //inline: true
+
+
+
+
+
+
+                });
+
+
+            });
+
+
+
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a target="_blank" href="/login.jsp">Home</a></li>
+
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <h2 class="text-center p-3 mb-2 bg-primary text-white">Book Counsellor</h2>
+            <div class="row">
+                <div >
+                    <form action="AddDate" method="post">
+                        <label><b>Pick date and time<b></label><br><br>
+                    <input type="text" id="datetimepicker2" name="date"/><br><br>
+                    <input type="submit" name="submit" value="Next">
+                    </form>
+                </div>
+            </div>
+            <div class="bottom-buffer"></div>
+        </div>
+    <jsp:include page="includes/footer.jsp" />
+</body>
+<!-- Latest compiled and minified JavaScript -->
+<link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.min.css"/>
+<script src="../jquery/jquery.datetimepicker.js"></script>
+</html>
