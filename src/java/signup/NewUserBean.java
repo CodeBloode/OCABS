@@ -10,6 +10,7 @@ public class NewUserBean {
     private String email;
     private String pass2;
     public boolean valid;
+   
 
     public String getPass2() {
         return pass2;

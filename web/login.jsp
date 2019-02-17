@@ -70,8 +70,14 @@
     <body>
         <jsp:include page="includes/nav.html"/>
         <br><br>
+         <% String messages = request.getAttribute("messages").toString();
+            if(messages.equals(null)){
+                messages = "";
+            }
+        %>
       
         <div class="container mt-5 ml-auto mr-auto col-md-4 offset-4" id="login">
+            <div class="text-danger text-center"><p><%=messages%></p></div>
             
             <form action="login" class="border border-light p-5" Method="POST" name="form">
                 
