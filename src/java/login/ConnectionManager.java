@@ -22,12 +22,9 @@ public class ConnectionManager {
         String  url = "jdbc:mysql://localhost:3306/codebloode";
         
         try{
-<<<<<<< HEAD
             con = DriverManager.getConnection(url, "root", "Alex1234");
-=======
 
-            con = DriverManager.getConnection(url, "root", "@elvis$");
->>>>>>> d69d72228f33c312a3bbaff0ff4a90f5b84aa4bb
+            //con = DriverManager.getConnection(url, "root", "@elvis$");
             
         }
         catch(Exception ex){

@@ -9,8 +9,6 @@ package student;
  *
  * @author linuxpc
  */
-import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
-import java.text.*;
 import java.util.*;
 import java.sql.*;
 import login.ConnectionManager;

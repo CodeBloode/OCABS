@@ -184,11 +184,9 @@
     <servlet-mapping>
         <servlet-name>ViewAllCounsellors</servlet-name>
         <url-pattern>/ViewAllCounsellors</url-pattern>
-<<<<<<< HEAD
+
     </servlet-mapping>    
-=======
-    </servlet-mapping>
->>>>>>> d69d72228f33c312a3bbaff0ff4a90f5b84aa4bb
+
 
     <servlet-mapping>
         <servlet-name>deanhome</servlet-name>
