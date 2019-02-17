@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<Context antiJARLocking="true" path="/Online-Appointment-Booking-System" reloadable="true" />
+<!--<Context </Context>-->
+=======
 <Context antiJARLocking="true" reload="true" path="/Online-Appointment-Booking-System"/>
+>>>>>>> 4cb59e7a6449e0ff4cf77e43316e997b38d5c4f5
