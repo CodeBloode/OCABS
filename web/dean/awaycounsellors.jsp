@@ -1,14 +1,15 @@
 <%-- 
-    Document   : approveschedules
-    Created on : Jan 16, 2019, 8:12:28 AM
+    Document   : awaycounsellors
+    Created on : Feb 18, 2019, 12:17:58 AM
     Author     : Alex
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<HTML lang="en">
-<head>
-    <title>Approve Counsellor Schedules</title>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Unavailable Counsellors</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -132,15 +133,12 @@ body {
 
         <div class="topnav fixed-top" style="background-color: #4062b7; margin-left: 250px">
     <nav class="navbar navbar-expand-md ">
-<!--         <li class="nav-item">-->
-                <p style="color: white; margin-left: 300px"> Egerton University Appointment Booking Systems.</p> 
-            <!--</li-->
+        <p style="color: white; margin-left: 300px"> Egerton University Appointment Booking Systems.</p> 
       <ul class="navbar-nav ml-auto">
-         
             
           
             <li class="nav-item">
-                <a class="nav-link active" href="awaycounsellors.jsp">Unavalable Counsellors</a>
+                <a class="nav-link active" href="printawaycounsellors.jsp">Print Unavailable Counsellors</a>
             </li>
             <!--
             <li class="nav-item">
@@ -148,19 +146,18 @@ body {
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="approveschedules.jsp">Approve Counsellor Schedules</a>
-            </li>
-            -->
+            </li>>-->
+            
             <li class="nav-item">
                 <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>  </ul>
       
     </nav>
     </div>
+<h4 style="margin-left:500px; margin-top: 100px">
+    Unavailable Counsellors 
+</h4>
 <div style="margin-left:500px; margin-top: 100px">
-
-    <div>
-        <h4>Approve schedule of counsellors</h4>
-        <div>
     <form action="#" method="get">
       Filter By:  <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
         
@@ -180,13 +177,11 @@ $(document).ready(function(){
 
 })
     </script>
-        <button type="submit" name="get"><span>Approve <img src="" title="" alt="" height="17" width="17" /></span></button>
+        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
     </form>
-</div>
-</div>
 </div>
 <div class="footer fixed-bottom">
        <jsp:include page="../includes/footer.jsp"/>
     </div>
-</body>
-    </HTML>
+    </body>
+</html>

@@ -135,6 +135,7 @@ body {
 
         <div class="topnav fixed-top" style="background-color: #4062b7; margin-left: 250px">
     <nav class="navbar navbar-expand-md ">
+        <p style="color: white; margin-left: 300px"> Egerton University Appointment Booking Systems.</p> 
       <ul class="navbar-nav ml-auto">
           <!--  
             <li class="nav-item">
@@ -143,12 +144,13 @@ body {
             <li class="nav-item">
                 <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
             </li>
+          -->
             <li class="nav-item">
-                <a class="nav-link" href="approveschedules.jsp">Approve Counsellor Schedules</a>
-            </li>>-->
-            <li class="nav-item">
-                <p style="color: white; margin-right: 400px"> Egerton University Appointment Booking Systems.</p> 
-            </li
+                <a class="nav-link" href="printappointments.jsp">Print Booked Appointments</a>
+            </li>
+           
+                
+
             <li class="nav-item">
                 <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>
@@ -156,16 +158,15 @@ body {
     </nav>
     </div>
         <div style="height:auto; width: auto; margin-top: 120px" class=" text-center;">
-        <div class="flex-center flex-column"  >
+        <div class="flex-center flex-column" >
 <!-- <div class="container" style="margin-top: 120px "> -->
 
 <h4 style="float: left;">
     Booked Appointments are:
 </h4>
-<br><br>
 <div>
     <form action="" method="get">
-        <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+       Filter By: <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
        
         <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
     <script type="text/javascript">
@@ -185,53 +186,9 @@ $(document).ready(function(){
     </script>
         <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button> <br><br><br>
     </form>
-
-    <br><br>
 </div>
 
-
-   <h4>
-       Select Date Below And Print The Booked Sessions
-   </h4>
-
-    <form action="" method="get">
-        <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off" readonly="readonly">
-        <script type="text/javascript">
-
-            $(document).ready(function(){
-
-
-                $("#from1").datepicker({
-                    numberOfMonth:1,
-                    format: 'yyyy/mm/dd',
-                    todayHighlight:true,
-                    autoclose:true,
-
-                });
-
-            })
-        </script>
-        <input type="text"  name="to" placeholder="To" id="to1" autocomplete="off" readonly="readonly">
-        <script type="text/javascript">
-
-            $(document).ready(function(){
-
-
-                $("#to1").datepicker({
-                    numberOfMonth:1,
-                    format: 'yyyy/mm/dd',
-                    todayHighlight:true,
-                    autoclose:true,
-
-                });
-
-            })
-        </script>
-
-        <button type="submit" name="print">Print</button>
-    </form>
-    </div>
-    </div>
+      </div>
         <div class="footer fixed-bottom">
        <jsp:include page="../includes/footer.jsp"/>
     </div>

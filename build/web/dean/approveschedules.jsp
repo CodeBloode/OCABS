@@ -132,35 +132,37 @@ body {
 
         <div class="topnav fixed-top" style="background-color: #4062b7; margin-left: 250px">
     <nav class="navbar navbar-expand-md ">
+<!--         <li class="nav-item">-->
+                <p style="color: white; margin-left: 300px"> Egerton University Appointment Booking Systems.</p> 
+            <!--</li-->
       <ul class="navbar-nav ml-auto">
-          <!--  
+         
+            
           
             <li class="nav-item">
-                <a class="nav-link active" href="deanhomepage.jsp">Home</a>
+                <a class="nav-link active" href="awaycounsellors.jsp">Unavalable Counsellors</a>
             </li>
+            <!--
             <li class="nav-item">
                 <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="approveschedules.jsp">Approve Counsellor Schedules</a>
-            </li>>-->
-            <li class="nav-item">
-                <p style="color: white; margin-right: 400px"> Egerton University Appointment Booking Systems.</p> 
-            </li
+            </li>
+            -->
             <li class="nav-item">
                 <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>  </ul>
       
     </nav>
     </div>
-<h4 style="margin-left:500px; margin-top: 100px">
-    Unavailable Counsellors 
-</h4>
-<br><br>
-<div style="margin-left:500px">
-<div>
+<div style="margin-left:500px; margin-top: 100px">
+
+    <div>
+        <h4>Approve schedule of counsellors</h4>
+        <div>
     <form action="#" method="get">
-        <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+      Filter By:  <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
         
         <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
     <script type="text/javascript">
@@ -178,93 +180,9 @@ $(document).ready(function(){
 
 })
     </script>
-        <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button>
+        <button type="submit" name="get"><span>Approve <img src="" title="" alt="" height="17" width="17" /></span></button>
     </form>
-    </table>
 </div>
-
-
-<br><br>
-<div>
-    <form action="" method="get">
-        <h4>Print Schedule for Away Counsellors</h4>
-
-        <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off" readonly="readonly">
-    <script type="text/javascript">
-
-        $(document).ready(function(){
-
-
-            $("#from1").datepicker({
-                numberOfMonth:1,
-                format: 'yyyy/mm/dd',
-                todayHighlight:true,
-                autoclose:true,
-
-            });
-
-        })
-    </script>
-    <input type="text"  name="to" placeholder="To" id="to1" autocomplete="off" readonly="readonly">
-    <script type="text/javascript">
-
-        $(document).ready(function(){
-
-
-            $("#to1").datepicker({
-                numberOfMonth:1,
-                format: 'yyyy/mm/dd',
-                todayHighlight:true,
-                autoclose:true,
-
-            });
-
-        })
-    </script>
-
-        <button type="submit" name="print">Print</button>
-    </form>
-
-    <br><br>
-    <div>
-        <h4>Approve schedule of counsellors</h4>
-        <form action="" method="POST">
-
-        <lable > Counsellor Number</lable>
-            <br>
-            <select name="counsellor">
-                <option value="">-- NONE --</option>
-                <option value="counsellor 1"> counsellor 1 </option>
-                <option value="counsellor 2"> counsellor 2 </option>
-                <option value="counsellor 3"> counsellor 3 </option>
-                <option value="counsellor 4"> counsellor 4 </option>
-                <option value="counsellor 5"> counsellor 5 </option>
-                <option value="counsellor 6"> counsellor 6 </option>
-                <option value="counsellor 7"> counsellor 7 </option>
-                <option value="counsellor 8"> counsellor 8 </option>
-            </select>
-            <br>
-            <br>
-            <input type="text" id= "from2" name="from" placeholder="Date Away" autocomplete="off" readonly="readonly">
-            <script type="text/javascript">
-
-                $(document).ready(function(){
-
-
-                    $("#from2").datepicker({
-                        numberOfMonth:1,
-                        format: 'yyyy/mm/dd',
-                        todayHighlight:true,
-                        autoclose:true,
-
-                    });
-
-                })
-            </script>
-
-            <button type="submit" name="approve">Approve</button>
-        </form>
-    </div>
 </div>
 </div>
 <div class="footer fixed-bottom">

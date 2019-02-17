@@ -1,15 +1,16 @@
 <%-- 
-    Document   : approveschedules
-    Created on : Jan 16, 2019, 8:12:28 AM
+    Document   : printappointments
+    Created on : Feb 18, 2019, 12:22:26 AM
     Author     : Alex
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<HTML lang="en">
-<head>
-    <title>Approve Counsellor Schedules</title>
-    <meta charset="UTF-8">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Print Booked Appointments</title>
+    <    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
@@ -138,9 +139,8 @@ body {
       <ul class="navbar-nav ml-auto">
          
             
-          
-            <li class="nav-item">
-                <a class="nav-link active" href="awaycounsellors.jsp">Unavalable Counsellors</a>
+                    <li class="nav-item">
+                <a class="nav-link active" href="viewsessions.jsp">Booked Appointments</a>
             </li>
             <!--
             <li class="nav-item">
@@ -156,37 +156,50 @@ body {
       
     </nav>
     </div>
-<div style="margin-left:500px; margin-top: 100px">
+         <h4 style="margin-left:500px; margin-top: 100px">
+       Select Date Below And Print The Booked Sessions
+   </h4>
+<div style="margin-left:500px;">
+    <br>
+    <form action="" method="get">
+        <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+        <script type="text/javascript">
 
-    <div>
-        <h4>Approve schedule of counsellors</h4>
-        <div>
-    <form action="#" method="get">
-      Filter By:  <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
-        
-        <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
-    <script type="text/javascript">
-
-$(document).ready(function(){
+            $(document).ready(function(){
 
 
-    $("#to").datepicker({
-        numberOfMonth:1,
-        format: 'yyyy/mm/dd',
-        todayHighlight:true,
-        autoclose:true,
+                $("#from1").datepicker({
+                    numberOfMonth:1,
+                    format: 'yyyy/mm/dd',
+                    todayHighlight:true,
+                    autoclose:true,
 
-    });
+                });
 
-})
-    </script>
-        <button type="submit" name="get"><span>Approve <img src="" title="" alt="" height="17" width="17" /></span></button>
+            })
+        </script>
+        <input type="text"  name="to" placeholder="To" id="to1" autocomplete="off" readonly="readonly">
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+
+                $("#to1").datepicker({
+                    numberOfMonth:1,
+                    format: 'yyyy/mm/dd',
+                    todayHighlight:true,
+                    autoclose:true,
+
+                });
+
+            })
+        </script>
+
+        <button type="submit" name="print">Print</button>
     </form>
-</div>
-</div>
-</div>
+    </div>
 <div class="footer fixed-bottom">
        <jsp:include page="../includes/footer.jsp"/>
     </div>
-</body>
-    </HTML>
+    </body>
+</html>

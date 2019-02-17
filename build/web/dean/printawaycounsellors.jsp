@@ -1,14 +1,14 @@
 <%-- 
-    Document   : approveschedules
-    Created on : Jan 16, 2019, 8:12:28 AM
+    Document   : printawaycounsellors
+    Created on : Feb 18, 2019, 12:18:49 AM
     Author     : Alex
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<HTML lang="en">
-<head>
-    <title>Approve Counsellor Schedules</title>
+<html>
+    <head>
+         <title>Print Away Counsellors Schedule</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -138,8 +138,7 @@ body {
       <ul class="navbar-nav ml-auto">
          
             
-          
-            <li class="nav-item">
+                    <li class="nav-item">
                 <a class="nav-link active" href="awaycounsellors.jsp">Unavalable Counsellors</a>
             </li>
             <!--
@@ -158,10 +157,10 @@ body {
     </div>
 <div style="margin-left:500px; margin-top: 100px">
 
-    <div>
-        <h4>Approve schedule of counsellors</h4>
-        <div>
-    <form action="#" method="get">
+<div>
+    <form action="" method="get">
+        <h4>Print Schedule for Away Counsellors</h4>
+
       Filter By:  <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
         
         <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
@@ -180,13 +179,12 @@ $(document).ready(function(){
 
 })
     </script>
-        <button type="submit" name="get"><span>Approve <img src="" title="" alt="" height="17" width="17" /></span></button>
+        <button type="submit" name="get"><span>Print <img src="" title="" alt="" height="17" width="17" /></span></button>
     </form>
 </div>
 </div>
-</div>
-<div class="footer fixed-bottom">
+    <div class="footer fixed-bottom">
        <jsp:include page="../includes/footer.jsp"/>
     </div>
-</body>
-    </HTML>
+    </body>
+</html>
