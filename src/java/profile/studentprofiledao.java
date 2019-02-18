@@ -35,8 +35,8 @@ public class studentprofiledao {
             String email = null;
             String phoneNo = null;
             
-            String query = "SELECT * FROM student_auth WHERE u_name=?";
-            String Upadate = "UPDATE student_auth SET pass=?, salt=? WHERE u_name = ?";
+            String query = "SELECT * FROM student WHERE regNo=?";
+            //String Upadate = "UPDATE student_auth SET pass=?, salt=? WHERE u_name = ?";
             
             try{
                 connection = ConnectionManager.getConnect();
@@ -45,11 +45,11 @@ public class studentprofiledao {
                 rs = stmt.executeQuery();
                 data = rs.next();
                                          
-                firstName = rs.getString("f_name");
-                lastName = rs.getString("l_name");
+                firstName = rs.getString("fName");
+                lastName = rs.getString("lName");
                 registrationdate = rs.getString("day");
                 email = rs.getString("email");
-                phoneNo = rs.getString("phone");
+                phoneNo = rs.getString("phoneNo");
                 System.out.println("Fetched Data successful");
                 System.out.println("Names :" + firstName + " "+ lastName);
                 System.out.println("date "+ registrationdate);

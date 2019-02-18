@@ -51,8 +51,8 @@ public class login extends HttpServlet {
                 //set session
                 HttpSession session = request.getSession(true);
                  session.setAttribute("userSession", user);
-                session.setAttribute("userSession1", user.getUsername());
-                session.setMaxInactiveInterval(-1);
+                 session.setAttribute("userSession1", user.getUsername());
+                 session.setMaxInactiveInterval(-1);
                
                 //check remember me option
                 if(request.getParameter("rem") != null){

@@ -26,8 +26,8 @@ public class ChangePasswordDao {
             String dbpass =null;
             String dbsalt = null;
             
-            String query = "SELECT * FROM student_auth WHERE u_name=?";
-            String Upadate = "UPDATE student_auth SET pass=?, salt=? WHERE u_name = ?";
+            String query = "SELECT * FROM student WHERE regNo=?";
+            String Upadate = "UPDATE student SET password=?, salt=? WHERE regNo = ?";
             
             try{
                 connection = ConnectionManager.getConnect();
@@ -39,7 +39,7 @@ public class ChangePasswordDao {
                        System.out.println("wrong user");
                        bean.setValid(false);
                    }else{
-                       dbpass = rs.getString("pass");
+                       dbpass = rs.getString("password");
                        dbsalt = rs.getString("salt");
                        System.out.println("Fetched Data successful");
                        boolean verifyPass = EncryptAndDecrypt.verifyUserPassword(oldpass, dbpass, dbsalt);

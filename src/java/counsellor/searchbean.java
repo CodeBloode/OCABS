@@ -17,6 +17,7 @@ public class searchbean {
     private  String stident;
     private String starttime;
     private String endtime;
+    
 
     public String getStarttime() {
         return starttime;

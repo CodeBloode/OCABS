@@ -16,6 +16,7 @@ public class NewUserDAO {
      static ResultSet rs = null;
      public static int run =0;
      static PreparedStatement insert = null;
+     static PreparedStatement insertdean = null;
      
      public static NewUserBean signup( NewUserBean bean) throws ClassNotFoundException{
         
@@ -36,8 +37,8 @@ public class NewUserDAO {
          String securePass = EncryptAndDecrypt.generateSecurePassword(password, salt);
          
          
-         String insertQuery = "INSERT INTO student_auth (f_name,l_name,u_name, pass, salt,day,email,phone) VALUES (?,?,?,?,?,NOW(),?,?)";
-         
+         String insertQuery = "INSERT INTO student(regNo,fName,lName, phoneNo,email,password,salt,day) VALUES (?,?,?,?,?,?,?,NOW())";
+         //String deanQuery = "INSERT INTO dean (fName,lName,uName,email,phoneNo,password,salt,day)VALUES(?,?,?,?,?,?,?,NOW())";
          
          if(!password.equals(pass2))
          {
@@ -54,16 +55,28 @@ public class NewUserDAO {
 
 
                        insert = connection.prepareStatement(insertQuery);
-
-                       insert.setString(1, firstname);
-                       insert.setString(2, lastname);
-                       insert.setString(3, username);
-                       insert.setString(4, securePass);
-                       insert.setString(5, salt);
-                       insert.setString(6, email);
-                       insert.setString(7, phone);
-
-                    run = insert.executeUpdate();
+//                       insertdean = connection.prepareStatement(deanQuery);
+//                        
+//                       //dean
+//                       insertdean.setString(1, firstname);
+//                       insertdean.setString(2, lastname);
+//                       insertdean.setString(3, username);
+//                       insertdean.setString(4, email);
+//                       insertdean.setString(5,phone);
+//                       insertdean.setString(6, securePass);
+//                       insertdean.setString(7, salt);
+//                       
+                       //student
+                      insert.setString(2, firstname);  
+                      insert.setString(3, lastname);
+                      insert.setString(1, username);
+                      insert.setString(6, securePass);
+                      insert.setString(7, salt);
+                      insert.setString(5, email);
+                      insert.setString(4, phone);
+                      
+                      run = insert.executeUpdate();
+                 //   run = insertdean.executeUpdate();
 
                     if(run == 1){
 

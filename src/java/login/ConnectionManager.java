@@ -19,7 +19,7 @@ public class ConnectionManager {
         
         Class.forName("com.mysql.jdbc.Driver");
         
-        String  url = "jdbc:mysql://localhost:3306/codebloode2";
+        String  url = "jdbc:mysql://localhost:3306/codebloode";
         
         try{
 

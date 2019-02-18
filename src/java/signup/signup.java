@@ -51,7 +51,10 @@ public class signup extends HttpServlet {
             user.setPhone(request.getParameter("phone"));
             
             //search for double existing user
-            existinguser = NewUserDAO.searchuser(user.getUsername(), "u_name", "student_auth");
+            //dean
+            //existinguser = NewUserDAO.searchuser(user.getUsername(), "uName", "dean");
+            //student
+            existinguser = NewUserDAO.searchuser(user.getUsername(), "regNo", "student");
             
             if(existinguser){
                // user.setMessages("");
