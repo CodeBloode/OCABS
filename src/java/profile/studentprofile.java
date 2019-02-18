@@ -25,7 +25,7 @@ public class studentprofile extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("servlet running..");
+//        System.out.println("servlet running..");
        studentprofilebean bean = new studentprofilebean();
        HttpSession session = request.getSession(true);
        String username = session.getAttribute("userSession1").toString();
@@ -44,7 +44,7 @@ public class studentprofile extends HttpServlet {
             request.setAttribute("lastname", bean.getL_name());
             request.setAttribute("email", bean.getEmail());
             request.setAttribute("phone", bean.getPhone());
-            System.out.println("page loading....");
+//            System.out.println("page loading....");
             request.getRequestDispatcher("student/studentprofile.jsp").forward(request, response);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(studentprofile.class.getName()).log(Level.SEVERE, null, ex);

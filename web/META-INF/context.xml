@@ -2,6 +2,3 @@
 
 <Context antiJARLocking="true" path="/Online-Appointment-Booking-System" reloadable="true" />
 <!--<Context </Context>-->
-
-<!--<Context antiJARLocking="true" reload="true" path="/Online-Appointment-Booking-System"/>-->
-

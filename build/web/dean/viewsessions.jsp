@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
     <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="css/datepicker.css">
@@ -31,6 +32,14 @@
 
 
      <!-- SCRIPTS -->
+=======
+    
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
+        <title>Dean Home Page</title>
+
+        <!-- SCRIPTS -->
+
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.css">
@@ -55,9 +64,10 @@
 <link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
 <link rel="stylesheet" type="text/css" href="cdn/vfs_fonts.js">
 
-        <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all">
+    <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all"> 
 
             <!-- Material Design Bootstrap -->
+<<<<<<< HEAD
     <link href="../bootstrap1/bootstrapcss/mdb.min.css" rel="stylesheet">
 
 
@@ -69,34 +79,161 @@
 <body>
 
  <div class="topnav fixed-top" style="background-color: #4062b7">
+=======
+    <!--<link href="../bootstrap1/bootstrapcss/mdb.min.css" rel="stylesheet">-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #004085;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav1 {
+    height: 60%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 70px;
+  left: 10px;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 15px;
+}
+
+.sidenav1 a {
+  padding: 6px 15px 6px 16px;
+  text-decoration:none;
+  font-size: 15px;
+  color: #000000;
+  display: block;
+}
+
+.sidenav1 a:hover {
+    color: #ffffff;
+    background-color: #59cbea ;
+}
+.change a:hover{
+    color: blue;
+    background-color: #ffffff;
+}
+.change a:active{
+    color: blue;
+    text-decoration: underline;
+}
+/*.main {
+  margin-left: 160px;  Same as the width of the sidenav 
+  font-size: 28px;  Increased text to enable scrolling 
+  padding: 0px 10px;
+}*/
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+
+
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+   <link rel="stylesheet" type="text/css" href="../cdn/all.css">
+   <link rel="stylesheet" type="text/css" href="../cdn/all1.css"
+<link rel="stylesheet"   type="text/css" href="../cdn/bootstrap.min.css">
+<link rel="stylesheet"   type="text/javascript" href="../cdn/buttons.bootstrap.min.js">
+<link rel="stylesheet" type="text/javascript" href="../cdn/buttons.colVis.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/buttons.html5.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/buttons.print.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/dataTables.bootstrap.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/dataTables.buttons.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/jquery-3.3.1.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/jquery.dataTables.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/jszip.min.js">
+<link rel="stylesheet"  type="text/javascript"  href="../cdn/mdb.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/pdfmake.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/vfs_fonts.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/font-awesome.min.js">
+<link rel="stylesheet"  type="text/javascript" href="../cdn/jquery-3.2.1.slim.min.js">
+
+    </head>
+    <body style="background-color: whitesmoke">
+        <div class="sidenav">
+   <div class="sidenav1">
+  <a href="index.jsp"><i class="fa fa-home" style='font-size:18px'></i> Home</a>
+  <a href="viewsessions.jsp"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
+  <a href="../ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
+  <a href="../CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
+  <a href="approveschedules.jsp"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
+  <a href="../AboutUs/contact.jsp"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
+  <a href="../AboutUs/about.jsp"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
+  <div class="change">
+  <a href="changepassword.jsp" style=" font-style: italic"><i class="fas fa-key" style='font-size:18px'></i> Change Your Password ?</a>
+  </div>
+</div> </div>
+            
+       
+
+        <div class="topnav fixed-top" style="background-color: #4062b7; margin-left: 250px">
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
     <nav class="navbar navbar-expand-md ">
-        <ul class="navbar-nav ml-auto">
+        <p style="color: white; margin-left: 300px"> Egerton University Appointment Booking Systems.</p> 
+      <ul class="navbar-nav ml-auto">
+          <!--  
             <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" href="index.jsp">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="viewsessions.jsp">View Appointments</a>
+=======
+                <a class="nav-link active" href="deanhomepage.jsp">Home</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
+            </li>
+          -->
+            <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" href="approveschedules.jsp">Approve Schedules</a>
             </li>
 
+=======
+                <a class="nav-link" href="printappointments.jsp">Print Booked Appointments</a>
+            </li>
+           
+                
+
+            <li class="nav-item">
+                <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
+            </li>
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
         </ul>
     </nav>
     </div>
-
-
         <div style="height:auto; width: auto; margin-top: 120px" class=" text-center;">
-        <div class="flex-center flex-column"  >
+        <div class="flex-center flex-column" >
 <!-- <div class="container" style="margin-top: 120px "> -->
 
 <h4 style="float: left;">
     Booked Appointments are:
 </h4>
-<br><br>
 <div>
     <form action="" method="get">
+<<<<<<< HEAD
         <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+=======
+       Filter By: <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
        
         <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
     <script type="text/javascript">
@@ -116,10 +253,9 @@ $(document).ready(function(){
     </script>
         <button type="submit" name="get"><span>Search <img src="../images/search.png" title="" alt="" height="17" width="17" /></span></button> <br><br><br>
     </form>
-
-    <br><br>
 </div>
 
+<<<<<<< HEAD
 
    <h4>
        Select Date Below And Print The Booked Sessions
@@ -168,5 +304,12 @@ $(document).ready(function(){
 <div class="footer">
     <jsp:include page="../includes/footer.jsp"/>
     </div>
+=======
+      </div>
+        <div class="footer fixed-bottom">
+       <jsp:include page="../includes/footer.jsp"/>
+    </div>
+
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
 </body>
 </HTML>

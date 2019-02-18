@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+<<<<<<< HEAD
                    <!--css-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
@@ -47,6 +48,8 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
          <script src="MDB/js/mdtimepicker.js"></script>
          <script src="MDB/js/mdtimepicker.min.js"></script>
+=======
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Counsellor Home</title>
     </head>

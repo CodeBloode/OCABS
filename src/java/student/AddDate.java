@@ -7,7 +7,6 @@ package student;
 
 import java.sql.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +28,7 @@ public class AddDate extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
+        request.getRequestDispatcher("student/studentBooking.jsp").forward(request,response);
     }
 
     @Override

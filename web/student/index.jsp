@@ -29,11 +29,13 @@
     <body>
         <jsp:include page="../includes/authenticatednav.html"/>
         <br><br><br><br>
-        
-      
+         <% UserBean currentUser = ((UserBean)(session.getAttribute("userSession")));%>
+        <div class="container text-center mt-7" style="margin-top:10%">
+             <p class="h4-responsive"> Welcome <%= currentUser.getFirstName() + " " + currentUser.getLastName() %> </p>
+        </div>
            
-            <% UserBean currentUser = ((UserBean)(session.getAttribute("userSession")));%>
-        <h1> Welcome <%= currentUser.getFirstName() + " " + currentUser.getLastName() %> </h1>
+           
+       
          
          
          <div class="fixed-bottom">

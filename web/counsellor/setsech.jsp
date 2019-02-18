@@ -86,8 +86,8 @@
 
                    <div class="container" Style="float: left; width: 220px; align-content: center; margin-left: 333px ">
                    <label>Date Away</label><br/>
-                   <input type="text" name="date_away" class="form-control" id="date" required  clickable="clickable" autocomplete="off" style="max-width: 200px">
 
+                   <input type="text" name="date_away" class="form-control" id="date" required  clickable="clickable" autocomplete="off" style="max-width: 200px">
 
        <br>
 
