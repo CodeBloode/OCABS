@@ -11,6 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        
         <title>View Counsellors</title>
     </head>
     <body bgcolor="whitesmoke">
@@ -29,7 +30,7 @@
         <table border="1" width="90%" align="center">
             <tr><th>Id</th><th>Name</th><th>Counsellor No.</th><th>Phone No.</th><th>Email</th><th>Gender</th><th>Password</th><th>Status</th><th>Edit</th><th>Delete</th></tr>
                     <c:forEach items="${list}" var="u">
-                <tr><td>${u.getId()}</td><td>${u.getCounsname()}</td><td>${u.getCounsno()}</td><td>${u.getPhone()}</td><td>${u.getEmail()}</td><td>${u.getGender()}</td><td>${u.getPassword()}</td><td>${u.getState()}</td><td><a href="updateForm.jsp?id=${u.getId()}" style="color: green">Edit</a></td><td><a href="DeleteCounsellor.jsp?id=${u.getId()}" style="color: maroon">Delete</a></td></tr>
+                <tr><td>${u.getId()}</td><td>${u.getCounsname()}</td><td>${u.getCounsno()}</td><td>${u.getPhone()}</td><td>${u.getEmail()}</td><td>${u.getGender()}</td><td>${u.getPassword()}</td><td>${u.getState()}</td><td><a href="dean/updateForm.jsp?id=${u.getId()}" style="color: green">Edit</a></td><td><a href="dean/DeleteCounsellor.jsp?id=${u.getId()}" style="color: maroon">Delete</a></td></tr>
             </c:forEach>
         </table>
         <br/><a href="addCounsellorForm.jsp" style="color: green">Add New Counsellor</a>
