@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>student</title>
+        <title>Student|Change password</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Font Awesome -->
@@ -20,7 +20,7 @@
     <body>
         <jsp:include page="../includes/authenticatednav.html"/>
         <br><br><br><br>
-        <div class="container">
+        <div class="container col-md-6 offset-3">
       
            
      

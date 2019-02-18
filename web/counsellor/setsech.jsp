@@ -63,13 +63,13 @@
 
                    <div class="container" Style="float: left; width: 220px; align-content: center; margin-left: 333px ">
                    <label>Date Away</label><br/>
-                   <input type="text" name="date_away" class="form-control" id="date" required readonly="readonly" clickable="clickable" autocomplete="off" style="max-width: 200px">
+                   <input type="text" name="date_away" class="form-control" id="date" required clickable="clickable" autocomplete="off" style="max-width: 200px">
 
 
        <br>
 
                    <label>Time Away</label><br>
-                   <input type="text" name="time_away" class="form-control" id= "timepicker"  required readonly="readonly" clickable="clickable" autocomplete="off" style="max-width: 200px">
+                   <input type="text" name="time_away" class="form-control" id= "timepicker"  required  clickable="clickable" autocomplete="off" style="max-width: 200px">
 
                    <!--<input type="text" id="timepicker" data-time-format="H:i:s" data-step="01"  data-show-2400="true"/>-->
                    

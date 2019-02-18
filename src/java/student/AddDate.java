@@ -28,7 +28,7 @@ public class AddDate extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
+        request.getRequestDispatcher("student/studentBooking.jsp").forward(request,response);
     }
 
     @Override

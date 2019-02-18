@@ -27,7 +27,7 @@ public class SetSechServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       // try (PrintWriter out = response.getWriter())
+       
        {
              
                int hours = Integer.parseInt(request.getParameter("hduration"));
