@@ -4,11 +4,11 @@
     Author     : Alex
 --%>
 
-<<%@page import="dean.DeanManageCounsellorDAO"%>
-<jsp:useBean id="u" class="dean.DeanManageCounsellorBean"></jsp:useBean>
+<<%@page import="w3adda.UserDAO"%>
+<jsp:useBean id="u" class="w3adda.UserBean"></jsp:useBean>
 <jsp:setProperty property="*" name="u"/>
 
 <%
-int i=DeanManageCounsellorDAO.update(u);
-response.sendRedirect("viewCounsellors.jsp");
+int i=UserDAO.update(u);
+response.sendRedirect("viewUsers.jsp");
 %>

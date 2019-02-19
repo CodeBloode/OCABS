@@ -162,15 +162,15 @@ body {
         <h4>Approve schedule of counsellors</h4>
         <div>
     <form action="#" method="get">
-      Filter By:  <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+      Filter By:  <input type="text" id= "datep" name="from" placeholder="From" autocomplete="off" readonly="readonly">
         
         <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
     <script type="text/javascript">
 
-$(document).ready(function(){
+$(function(){
 
 
-    $("#to").datepicker({
+    $("#datep").datepicker({
         numberOfMonth:1,
         format: 'yyyy/mm/dd',
         todayHighlight:true,
