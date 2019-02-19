@@ -37,10 +37,6 @@
         <servlet-class>counsellor.Search</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ServletDAO</servlet-name>
-        <servlet-class>counsellor.ServletDAO</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>searchView</servlet-name>
         <servlet-class>counsellor.searchView</servlet-class>
     </servlet>
@@ -52,6 +48,8 @@
 
         <servlet-name>DateManipulationServ</servlet-name>
         <servlet-class>counsellor.DateManipulationServ</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>Book</servlet-name>
         <servlet-class>student.Book</servlet-class>
     </servlet>
@@ -86,10 +84,6 @@
     <servlet-mapping>
         <servlet-name>Search</servlet-name>
         <url-pattern>/Search</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletDAO</servlet-name>
-        <url-pattern>/ServletDAO</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>searchView</servlet-name>
@@ -171,6 +165,8 @@
 
         <servlet-name>DateManipulationServ</servlet-name>
         <url-pattern>/DateManipulationServ</url-pattern>
+         </servlet-mapping>
+     <servlet-mapping>
         <servlet-name>Book</servlet-name>
         <url-pattern>/book</url-pattern>
     </servlet-mapping>

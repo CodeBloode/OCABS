@@ -37,7 +37,7 @@ public class ViewAllCounsellors extends HttpServlet {
       
     try {
          Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/codebloode", "root", "Alex1234");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/codebloode", "root", "console");
       
       PreparedStatement ps = conn.prepareStatement("SELECT id, f_name, email, gender, phone, status, u_name from counsellor_auth");
       ResultSet rs = ps.executeQuery();
