@@ -52,7 +52,7 @@ public class CounsellorSignup extends HttpServlet {
             user.setConfirm_password(request.getParameter("cpwd"));
             
              //search for double existing user
-            existinguser = NewUserDAO.searchuser(user.getCounsNo(), "u_name", "counsellor_auth");
+            existinguser = NewUserDAO.searchuser(user.getCounsNo(), "counsNo", "counsellor");
             
            if(existinguser){
                // user.setMessages("");

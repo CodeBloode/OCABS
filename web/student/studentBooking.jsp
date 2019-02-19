@@ -28,7 +28,7 @@
 
 <script>
   $( function() {
-    $( "#datetimepicker" ).datepicker({beforeShowDay: $.datepicker.noWeekends});
+    $( "#datetimepicker" ).datepicker({minDate: 0, beforeShowDay: $.datepicker.noWeekends,dateFormat: 'yy-mm-dd'});
   } );
   </script>
     
@@ -38,14 +38,20 @@
       <jsp:include page="../includes/authenticatednav.html"/>
         
       <br><br>
-       <div class="container col-md-4 offset-4">                 
+      <% String messages = request.getAttribute("messages").toString();
+            if(messages.equals(null)){
+                messages = "";
+            }
+        %>
+       <div class="container col-md-4 offset-4">
+           <div class="text-danger text-center"><p><%=messages%></p></div>
         <form action="AddDate" class="border border-light p-5" Method="post" name="form">
                 
                 <p class="h4 mb-4 text-center">Select Date and Time to Proceed</p>
               
                 <div class="form-group">
                   <label for="datetimepicker" class="font-weight-bolder">Pick date</label>
-                  <input type="date" class="form-control" id="datetimepicker"  name="date" required>
+                  <input type="date" class="form-control" id="datetimepicker" readonly="readonly" name="date" required>
                  </div>
                 <div class="form-group">
                   <label for="duration" class="text-left font-weight-bolder">Time</label>
@@ -54,7 +60,7 @@
                                 
                 <button type="submit" class="btn btn-primary">Next</button>
             
-                              <!-- ennd -->
+                              
                 </form>
        </div>
 

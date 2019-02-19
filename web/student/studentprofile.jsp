@@ -20,18 +20,36 @@
         <br><br><br>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 offset-3 text-center">
+                <div class="col-md-6 offset-3">
                     <div class="card">
                         <div class="card-header">
                             <p class="h4">Student Profile</p>
                         </div>
                         <div>
                             <p class="text-center"><img src="images/userimg.jpg" alt="user" height="150" width="150"></p>
-                            <p><i class="mr-3"></i> <b>RegNo:</b><%= " " %> ${user}</p>
-                            <p><i class="mr-3"></i> <b>Name:</b><%= " " %> ${firstname}<%= " " %>${lastname}</p>
-                            <p><i class="mr-3"></i> <b>Email:</b><%= " " %>${email}</p>
-                            <p><i class="mr-3"></i> <b>Phone:</b> <%= " " %>${phone}</p>
-                            <p><i class="mr-3"></i> <b>Registered date:</b><%= " " %> ${date}</p>
+                            <table class="mr-auto ml-auto">
+                                <tr>
+                                    <td><b>RegNo:</b></td>
+                                    <td>${user}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Name:</b></td>
+                                     <td>${firstname}<%= " " %>${lastname}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Email:</b></td>
+                                     <td>${email}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Phone:</b></td>
+                                     <td>${phone}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Registered on:</b></td>
+                                     <td>${date}</td>
+                                </tr>
+                            </table>
+<!--                            
                         </div>
                         
                     </div>

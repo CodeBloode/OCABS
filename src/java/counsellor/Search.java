@@ -79,7 +79,7 @@ public class Search extends HttpServlet {
             
             request.setAttribute("viewdetails", data);
             System.out.println("records : " +data);
-             request.getRequestDispatcher("counsellor/searchview.jsp").forward(request, response);
+            request.getRequestDispatcher("counsellor/searchview.jsp").forward(request, response);
             //response.sendRedirect("searchView?search results available");
           
             
