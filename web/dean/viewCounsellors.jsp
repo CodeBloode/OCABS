@@ -115,9 +115,9 @@ body {
         <ul class="navbar-nav ml-auto">
             
           
-            <li class="nav-item">
+<!--            <li class="nav-item">
                 <a class="nav-link active" href="dean/awaycounsellors.jsp" style="color: white">Print Unavailable Counsellors</a>
-            </li>
+            </li>-->
             <!--
             <li class="nav-item">
                 <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
@@ -148,7 +148,7 @@ body {
                     <td>${u.phoneNo}</td>
                     <td>${u.gender}</td>
               
-                   <td><a href="dean/DeleteCounsellor.jsp?id=${u.counsNo}" style="color: maroon">
+                   <td><a href="dean/DeleteCounsellor.jsp?counsNo=${u.counsNo}" style="color: maroon">
                            Delete <i class="fa fa-trash" aria-hidden="true" style="color: #000000"></i></a></td></tr>
             </c:forEach>
         </table>
