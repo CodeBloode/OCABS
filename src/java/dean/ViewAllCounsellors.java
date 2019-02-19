@@ -4,90 +4,64 @@
  * and open the template in the editor.
  */
 package dean;
+
+import counsellor.Search;
+import counsellor.searchbean;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.*;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import login.ConnectionManager;
 
-
-
+/**
+ *
+ * @author Alex
+ */
 public class ViewAllCounsellors extends HttpServlet {
-  protected void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException {
-    response.setContentType("text/html");
-    PrintWriter out = response.getWriter();
-    out.println("<html>");
-    out.println("<head><title>All Counsellors</title></head>");
-    out.println("<body>");
-    
-    request.getRequestDispatcher("/dean/header.html").include(request, response);
-   // out.println("<%include  page=\"includes/nav.html\">");
-    out.println("<center><h1>Counsellors List</h1>");
-    Connection conn = null;
-    Statement stmt = null;
-      
-    try {
-         Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/codebloode", "root", "console");
-      
-      PreparedStatement ps = conn.prepareStatement("SELECT id, f_name, email, gender, phone, status, u_name from counsellor_auth");
-      ResultSet rs = ps.executeQuery();
-     out.println("<table border=1 cellpadding=1 cellspacing=0 width=75%>");
-        out.print("<tr>");
-        out.println("<th>Id</th><th>Counsellor Name</th><th>Counsellor No.</th><th>Email</th><th>Gender</th><th>Phone</th><th>Status</th><th>Edit</th><th>Delete</th></tr>");
+
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         
-      while (rs.next()) {
-        int counsid = rs.getInt("id");
-        String counsname = rs.getString("f_name");
-         String counsuname = rs.getString("u_name");
-        String counsemail = rs.getString("email");
-        String  counsgender = rs.getString("gender");
-        String counsphone = rs.getString("phone");
-        String  counsstatus = rs.getString("status");
-       
-      out.println("<tr>");
-        out.println("<td>"+counsid +"</td>"+ "<td>"+counsname +"</td>" +"<td>"+counsuname+"</td><td>"+counsemail +"</td>"
-        +"<td>"+counsgender +"</td>"
-        +"<td>"+counsphone +"</td>"
-        +"<td>"+counsstatus +"</td>"
-        +"<td><a href=\"updateForm.jsp?id=${u.getId()}\">Edit</a></td><td><a href=\"DeleteUser.jsp?id=${u.getId()}\">Delete</a></td>");       
-       out.println("</tr>");
-      }
-        out.println("</table>");
-    } catch (SQLException e) {
-      out.println("An error occured while retrieving " + "all counsellors: " 
-          + e.toString());
-    } catch (ClassNotFoundException e) {
-      throw (new ServletException(e.toString()));
-    } finally {
-      try {
-        if (stmt != null) {
-          stmt.close();
-        }
-        if (conn != null) {
-          conn.close();
-        }
-      } catch (SQLException ex) {
-      }
+        ArrayList<DeanManageCounsellorBean> details =  DeanManageCounsellorDAO.getAllRecords();
+        
+      request.setAttribute("counsellors", details);
+                        System.out.println("obtained records "+details);
+       request.getRequestDispatcher("dean/viewCounsellors.jsp").forward(request, response);
     }
-    out.println("</center>");
-    out.println("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
-    request.getRequestDispatcher("/includes/footer.jsp").include(request, response);
-    out.println("</body>");
-    out.println("</html>");
-    out.close();
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     
-    //response.sendRedirect("/ViewAllCounsellors");
-    request.getRequestDispatcher("ViewAllCounsellors").forward(request, response);
-   
-  }
+    }
+
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
 }

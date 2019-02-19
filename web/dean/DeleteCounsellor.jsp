@@ -10,5 +10,5 @@
 
 <%
 DeanManageCounsellorDAO.delete(u);
-response.sendRedirect("viewCounsellors.jsp");
+response.sendRedirect("ViewAllCounsellors");
 %>

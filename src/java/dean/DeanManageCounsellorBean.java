@@ -8,41 +8,40 @@ package dean;
 
 
 public class DeanManageCounsellorBean {
-
-    private int id;
-    private String counsname, counsno,phone,email, gender, password, state;
     
-    public int getId() {
+        private String id;
+
+   
+   private String f_name,email, gender, phone, status, u_name;
+
+    public DeanManageCounsellorBean(String id, String f_name, String email, String gender, String phone, String status, String u_name) {
+        this.id = id;
+        this.f_name = f_name;
+        this.email = email;
+        this.gender = gender;
+        this.phone = phone;
+        this.status = status;
+        this.u_name = u_name;
+    }
+   
+   
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getCounsname() {
-        return counsname;
+    public String getF_name() {
+        return f_name;
     }
 
-    public void setCounsname(String counsname) {
-        this.counsname = counsname;
+    public void setF_name(String f_name) {
+        this.f_name = f_name;
     }
 
-    public String getCounsno() {
-        return counsno;
-    }
-    public void setCounsno(String counsno) {
-        this.counsno = counsno;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-    
     public String getEmail() {
         return email;
     }
@@ -59,18 +58,33 @@ public class DeanManageCounsellorBean {
         this.gender = gender;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    public String getState() {
-        return state;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public String getStatus() {
+        return status;
     }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getU_name() {
+        return u_name;
+    }
+
+    public void setU_name(String u_name) {
+        this.u_name = u_name;
+    }
+
+    @Override
+    public String toString() {
+        return "DeanManageCounsellorBean{" + "id=" + id + ", f_name=" + f_name + ", email=" + email + ", gender=" + gender + ", phone=" + phone + ", status=" + status + ", u_name=" + u_name + '}';
+    }
+    
 }

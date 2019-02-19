@@ -31,18 +31,25 @@
       <jsp:include page="../includes/authenticatednav.html"/>
         
       <br><br>
-       <div class="container col-md-4 offset-4">                 
+      <% // String messages = request.getAttribute("messages").toString();
+//            if(messages.equals(null)){
+//                messages = "";
+//            }
+        %>
+       <div class="container col-md-4 offset-4">    
+           <div class="text-success text-center"><p><% //messages%></p></div>
         <form action="Book" class="border border-light p-5" Method="post" name="form">
-                
                 <p class="h4 mb-4 text-center">Select From Available</p>
               
                  <div class="form-group">
                      <label for="client" class="font-weight-bolder">Available Counselors</label>
-                     <select class="custom-select mr-sm-2" id="client" name="user">
-                        <option value="unknown" selected>--NONE--</option>
-                         <c:forEach items="${counsellor_id}" var="counsellors">
-                              <option>${counsellors.couns_id}</option>                            
+                     <select class="custom-select mr-sm-2" id="client" name="counse">
+                        <option value="" selected>--NONE--</option>
+                        <c:forEach var="availableCounsellors" items="${counsellors}">
+                         
+                            <option>${availableCounsellors.cn}</option>
                         </c:forEach>
+                         
                       </select>
                 </div>
                                 
