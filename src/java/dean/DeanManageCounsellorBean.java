@@ -8,38 +8,31 @@ package dean;
 
 
 public class DeanManageCounsellorBean {
-    
-        private String id;
 
-   
-   private String f_name,email, gender, phone, status, u_name;
-
-    public DeanManageCounsellorBean(String id, String f_name, String email, String gender, String phone, String status, String u_name) {
-        this.id = id;
-        this.f_name = f_name;
+    public DeanManageCounsellorBean(String counsNo, String name, String email, String phoneNo, String gender) {
+        this.counsNo = counsNo;
+        this.name = name;
         this.email = email;
+        this.phoneNo = phoneNo;
         this.gender = gender;
-        this.phone = phone;
-        this.status = status;
-        this.u_name = u_name;
-    }
-   
-   
-
-    public String getId() {
-        return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+   private String counsNo,name,email, phoneNo, gender;
+
+    public String getCounsNo() {
+        return counsNo;
     }
 
-    public String getF_name() {
-        return f_name;
+    public void setCounsNo(String counsNo) {
+        this.counsNo = counsNo;
     }
 
-    public void setF_name(String f_name) {
-        this.f_name = f_name;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -50,6 +43,14 @@ public class DeanManageCounsellorBean {
         this.email = email;
     }
 
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
     public String getGender() {
         return gender;
     }
@@ -58,33 +59,10 @@ public class DeanManageCounsellorBean {
         this.gender = gender;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getU_name() {
-        return u_name;
-    }
-
-    public void setU_name(String u_name) {
-        this.u_name = u_name;
-    }
-
     @Override
     public String toString() {
-        return "DeanManageCounsellorBean{" + "id=" + id + ", f_name=" + f_name + ", email=" + email + ", gender=" + gender + ", phone=" + phone + ", status=" + status + ", u_name=" + u_name + '}';
+        return "DeanManageCounsellorBean{" + "counsNo=" + counsNo + ", name=" + name + ", email=" + email + ", phoneNo=" + phoneNo + ", gender=" + gender + '}';
     }
+
     
 }

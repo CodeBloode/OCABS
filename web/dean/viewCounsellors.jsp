@@ -139,15 +139,16 @@ body {
     </div>
      <div style="margin-left:300px; margin-top: 40px; margin-right: 30px">
          <table border="1" width="80%" style="text-decoration: none" class="table table-bordered">
-            <tr><th>Id</th><th>Name</th><th>Counsellor No.</th><th>Phone No.</th><th>Email</th><th>Gender</th><th>Status</th><th>Delete</th></tr>
+            <tr><th>Counsellor No.</th><th>Name</th><th>Email</th><th>Phone No.</th><th>Gender</th><th>Delete</th></tr>
                     <c:forEach items="${counsellors}" var="u">
                 <tr>
-                    <td>${u.id}</td>
-                    <td>${u.f_name}</td>
-                    <td>${u.u_name}</td><td>${u.phone}</td>
-                    <td>${u.email}</td><td>${u.gender}</td>
-                    <td>${u.status}</td>
-                   <td><a href="dean/DeleteCounsellor.jsp?id=${u.id}" style="color: maroon">
+                    <td>${u.counsNo}</td>
+                    <td>${u.name}</td>
+                    <td>${u.email}</td>
+                    <td>${u.phoneNo}</td>
+                    <td>${u.gender}</td>
+              
+                   <td><a href="dean/DeleteCounsellor.jsp?id=${u.counsNo}" style="color: maroon">
                            Delete <i class="fa fa-trash" aria-hidden="true" style="color: #000000"></i></a></td></tr>
             </c:forEach>
         </table>
