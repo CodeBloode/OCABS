@@ -11,12 +11,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrapcss/bootstrap.min.css">
+    <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="css/datepicker.css">
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+  <script>
+
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+
+  </script>
+    <title>Schedules</title>
+
+
+     <!-- SCRIPTS -->
+=======
     
     <script type="text/javascript" src="../jquery/jquery-3.3.1.js"></script>
         <title>Dean Home Page</title>
 
         <!-- SCRIPTS -->
 
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.css">
@@ -26,11 +49,37 @@
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/font-awesome.min.css">
              <!-- MDB core JavaScript -->
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">
-
+<link rel="stylesheet" type="text/css" href="cdn/all.css">
+<link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.colVis.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.html5.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/buttons.print.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/dataTables.bootstrap.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/dataTables.buttons.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/jquery-3.3.1.js">
+<link rel="stylesheet" type="text/css" href="cdn/jquery.dataTables.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/jszip.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/mdb.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
+<link rel="stylesheet" type="text/css" href="cdn/vfs_fonts.js">
 
     <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all"> 
 
             <!-- Material Design Bootstrap -->
+<<<<<<< HEAD
+    <link href="../bootstrap1/bootstrapcss/mdb.min.css" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+ <div class="topnav fixed-top" style="background-color: #4062b7">
+=======
     <!--<link href="../bootstrap1/bootstrapcss/mdb.min.css" rel="stylesheet">-->
 <style>
 body {
@@ -134,18 +183,31 @@ body {
        
 
         <div class="topnav fixed-top" style="background-color: #4062b7; margin-left: 250px">
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
     <nav class="navbar navbar-expand-md ">
         <p style="color: white; margin-left: 300px"> Egerton University Appointment Booking Systems.</p> 
       <ul class="navbar-nav ml-auto">
           <!--  
             <li class="nav-item">
+<<<<<<< HEAD
+                <a class="nav-link" href="index.jsp">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="viewsessions.jsp">View Appointments</a>
+=======
                 <a class="nav-link active" href="deanhomepage.jsp">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
             </li>
           -->
             <li class="nav-item">
+<<<<<<< HEAD
+                <a class="nav-link" href="approveschedules.jsp">Approve Schedules</a>
+            </li>
+
+=======
                 <a class="nav-link" href="printappointments.jsp">Print Booked Appointments</a>
             </li>
            
@@ -154,6 +216,7 @@ body {
             <li class="nav-item">
                 <a  class="nav-link" href="../logout.jsp"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
         </ul>
     </nav>
     </div>
@@ -166,7 +229,11 @@ body {
 </h4>
 <div>
     <form action="" method="get">
+<<<<<<< HEAD
+        <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+=======
        Filter By: <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
        
         <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
     <script type="text/javascript">
@@ -188,10 +255,61 @@ $(document).ready(function(){
     </form>
 </div>
 
+<<<<<<< HEAD
+
+   <h4>
+       Select Date Below And Print The Booked Sessions
+   </h4>
+
+    <form action="" method="get">
+        <input type="text" id= "from1" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+
+                $("#from1").datepicker({
+                    numberOfMonth:1,
+                    format: 'yyyy/mm/dd',
+                    todayHighlight:true,
+                    autoclose:true,
+
+                });
+
+            })
+        </script>
+        <input type="text"  name="to" placeholder="To" id="to1" autocomplete="off" readonly="readonly">
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+
+                $("#to1").datepicker({
+                    numberOfMonth:1,
+                    format: 'yyyy/mm/dd',
+                    todayHighlight:true,
+                    autoclose:true,
+
+                });
+
+            })
+        </script>
+
+        <button type="submit" name="print">Print</button>
+    </form>
+    </div>
+    </div>
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="footer">
+    <jsp:include page="../includes/footer.jsp"/>
+    </div>
+=======
       </div>
         <div class="footer fixed-bottom">
        <jsp:include page="../includes/footer.jsp"/>
     </div>
 
+>>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
 </body>
 </HTML>

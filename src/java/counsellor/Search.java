@@ -5,21 +5,6 @@
  */
 package counsellor;
 
-//import java.io.IOException;
-//import java.io.PrintWriter;
-//import java.sql.Connection;
-//import java.sql.DriverManager;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//import java.sql.Statement;
-//import java.util.ArrayList;
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
-//import javax.servlet.ServletException;
-//import javax.servlet.http.HttpServlet;
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletResponse;
-
 
 import java.io.*;
 import javax.servlet.*;
@@ -51,10 +36,16 @@ public class Search extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        HttpSession session = request.getSession(true);
+        String username = session.getAttribute("userSession1").toString();
+        System.out.println("session user "+username);
+        
         System.out.println("inside servlet ....");
        searchbean search = new searchbean();
        
        String formdate = request.getParameter("dater");
+       
+       
        
        search.setDate(formdate);
        
@@ -62,24 +53,25 @@ public class Search extends HttpServlet {
        
        //query
        
-       String query = "select * from appointments where date=?";
+       String query = "select * from appointment where date=? and counsNo=?";
        
         try {
             connection = ConnectionManager.getConnect();
             System.out.println("Connected to database...");
             stmt = connection.prepareStatement(query);
             stmt.setString(1, formdate);
+            stmt.setString(2, username);
             rs= stmt.executeQuery();
             System.out.println("Query executed..");
             ArrayList data = new ArrayList();
             
             while(rs.next()){
                 
-                String reg = rs.getString("Reg_No");
-                String couns = rs.getString("Couns_No");
+                String reg = rs.getString("regNo");
+                String couns = rs.getString("counsNo");
                 String dt = rs.getString("date");
-                String st = rs.getString("Start_Time");
-                String et = rs.getString("End_Time");
+                String st = rs.getString("time");
+                String et = rs.getString("eTime");
                 
                 searchbean newdata = new searchbean(dt,couns,reg,st,et);
                 data.add(newdata);
@@ -87,7 +79,7 @@ public class Search extends HttpServlet {
             
             request.setAttribute("viewdetails", data);
             System.out.println("records : " +data);
-             request.getRequestDispatcher("counsellor/searchview.jsp").forward(request, response);
+            request.getRequestDispatcher("counsellor/searchview.jsp").forward(request, response);
             //response.sendRedirect("searchView?search results available");
           
             

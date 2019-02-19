@@ -78,7 +78,7 @@
       
         <div class="container mt-5 ml-auto mr-auto col-md-4 offset-4" id="login">
             <div class="text-danger text-center"><p><%=messages%></p></div>
-            
+            <% messages = "";%>
             <form action="login" class="border border-light p-5" Method="POST" name="form">
                 
                 <p class="h4 mb-4 text-center">Login</p>

@@ -9,8 +9,6 @@ package counsellor;
  *
  * @author root
  */
-import java.text.*;
-import java.util.*;
 import java.sql.*;
 import login.ConnectionManager;
 import passwordhashanddecrytp.EncryptAndDecrypt;
@@ -25,7 +23,7 @@ public class NewCounsesellorDAO {
           
          
          
-         String username = bean.getUsername();
+         String username = bean.getCounsNo();
          String fullname = bean.getFullName();
          String email = bean.getEmail();
          String gender = bean.getGender();
@@ -47,7 +45,7 @@ public class NewCounsesellorDAO {
             System.out.println("Password: "+password);
          
         
-         String insertQueryCounsellor = "INSERT INTO counsellor_auth (f_name,email,gender,phone,status,u_name, pass, salt,day) VALUES (?,?,?,?,?,?,?,?,NOW())";
+         String insertQueryCounsellor = "INSERT INTO counsellor (counsNo,name,email,phoneNo,gender,password,salt,day) VALUES (?,?,?,?,?,?,?,NOW())";
          
          if(!password.equals(confirm_password)){
              bean.setValid(false);
@@ -62,14 +60,14 @@ public class NewCounsesellorDAO {
 
                            insert = connection.prepareStatement(insertQueryCounsellor);
 
-                           insert.setString(1, fullname);
-                           insert.setString(2, email);
-                           insert.setString(3, gender);
+                           insert.setString(2, fullname);
+                           insert.setString(3, email);
+                           insert.setString(5, gender);
                            insert.setString(4, phone);
-                           insert.setString(5, status);
-                           insert.setString(6, counsNo);
-                           insert.setString(7, securePass);
-                           insert.setString(8, salt);
+                           //insert.setString(5, status);
+                           insert.setString(1, counsNo);
+                           insert.setString(6, securePass);
+                           insert.setString(7, salt);
 
                         run = insert.executeUpdate();
 

@@ -58,18 +58,41 @@
                 <h2 style=" margin-top: 56px; text-align: center;">Please set your Schedule</h2>
            <br/>
 
+           <% 
+//               String messages = request.getAttribute("Message").toString();
+//           
+//              String Errormessage = request.getAttribute("ErrorMessage").toString();
+//
+//            if(messages.equals(null)){
+//                messages = "";
+//            }
+//            
+//            if(Errormessage.equals(null)){
+//                Errormessage = "";
+//            }
+        %>
+           
        <div class="container">
-           <form id="form" action="ServletDAO" method="post">
+           
+           <div class="text-center text-danger">
+            
+           </div>
+           
+           <div class="text-center text-success">
+              
+           </div>
+           
+           <form id="form" action="DateManipulationServ" method="post">
 
                    <div class="container" Style="float: left; width: 220px; align-content: center; margin-left: 333px ">
                    <label>Date Away</label><br/>
-                   <input type="text" name="date_away" class="form-control" id="date" required readonly="readonly" clickable="clickable" autocomplete="off" style="max-width: 200px">
 
+                   <input type="text" name="date_away" class="form-control" id="date" required  clickable="clickable" autocomplete="off" style="max-width: 200px">
 
        <br>
 
                    <label>Time Away</label><br>
-                   <input type="text" name="time_away" class="form-control" id= "timepicker"  required readonly="readonly" clickable="clickable" autocomplete="off" style="max-width: 200px">
+                   <input type="text" name="time_away" class="form-control" id= "timepicker"  required  clickable="clickable" autocomplete="off" style="max-width: 200px">
 
                    <!--<input type="text" id="timepicker" data-time-format="H:i:s" data-step="01"  data-show-2400="true"/>-->
                    
@@ -117,9 +140,9 @@
                    </div>
                </form>
        </div>
-           <div class="footer">
-    <jsp:include page="../includes/footer.jsp"/>
-    </div>
+<!--           <div class="footer">
+    <%--<jsp:include page="../includes/footer.jsp"/>--%>
+    </div>-->
            <script>
                 $(function() {
                    $( "#date" ).datepicker({ dateFormat: 'yy-mm-dd' });

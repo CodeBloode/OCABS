@@ -34,9 +34,9 @@ public class UserDAO {
 
             
        
-        String auth_student = "SELECT * FROM student_auth WHERE u_name=?";
-        String auth_counsellor = "SELECT * FROM counsellor_auth where u_name = ?";
-        String auth_dean = "SELECT * FROM dean_auth where u_name = ? ";
+        String auth_student = "SELECT * FROM student WHERE regNo=?";
+        String auth_counsellor = "SELECT * FROM counsellor where counsNo = ?";
+        String auth_dean = "SELECT * FROM dean where uName = ? ";
                
         
         try{
@@ -66,23 +66,23 @@ public class UserDAO {
                 
                 if(client.equals("student")){
                         //student
-                    firstName= rs.getString("f_name");
-                    lastName = rs.getString("l_name");
-                    pwd = rs.getString("pass");
+                    firstName= rs.getString("fName");
+                    lastName = rs.getString("lName");
+                    pwd = rs.getString("password");
                     salt = rs.getString("salt");
                     
                 }else
                     if(client.equals("counsellor")){
                         //counsellor
-                    fullName= rs.getString("f_name");
-                    pwd = rs.getString("pass");
+                    fullName= rs.getString("name");
+                    pwd = rs.getString("password");
                     salt = rs.getString("salt");
                         
                     }else{
                         //dean
-                    firstName= rs.getString("f_name");
-                    lastName = rs.getString("l_name");
-                    pwd = rs.getString("pass");
+                    firstName= rs.getString("fName");
+                    lastName = rs.getString("lName");
+                    pwd = rs.getString("password");
                     salt = rs.getString("salt");
                     
                     }

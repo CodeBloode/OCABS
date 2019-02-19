@@ -1,0 +1,69 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package student;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ *
+ * @author root
+ */
+public class Book extends HttpServlet {
+    
+    String messages="";
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.setAttribute("messages", messages);
+       request.getRequestDispatcher("student/availableCoun.jsp").forward(request,response);
+    }
+
+    
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+       HttpSession session = request.getSession(true);
+       String studentReg = session.getAttribute("userSession1").toString();
+       String counselor = request.getParameter("counse");
+       String appointmentDate = request.getAttribute("appDate").toString();
+       String appointmentTime = request.getAttribute("appTime").toString();
+       
+       BookBean bk = new BookBean();
+       
+       bk.setAppointmentDate(appointmentDate);
+       bk.setAppointmentTime(appointmentTime);
+       bk.setCounselor(counselor);
+       bk.setStudent(studentReg);
+       
+       bk = Bookdao.boookAppointment(bk);
+       
+       if(bk.isCorrect()){
+           
+            messages = "Book sucessful";
+            request.setAttribute("messages", messages);                    
+            //response.sendRedirect("Book");
+            //request.getRequestDispatcher("book?book successful").forward(request,response);
+       }else{
+          messages = "Could not make an appointment, please retry..";
+          request.setAttribute("messages", messages);
+          response.sendRedirect("AddDate");
+          //request.getRequestDispatcher("student/availableCoun.jsp").forward(request,response); 
+       }
+    }
+
+   
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}
