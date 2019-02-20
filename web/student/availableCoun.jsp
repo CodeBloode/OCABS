@@ -38,7 +38,7 @@
         %>
        <div class="container col-md-4 offset-4">    
            <div class="text-success text-center"><p><% //messages%></p></div>
-        <form action="Book" class="border border-light p-5" Method="post" name="form">
+        <form action="booking" class="border border-light p-5" Method="post" name="form">
                 <p class="h4 mb-4 text-center">Select From Available</p>
               
                  <div class="form-group">

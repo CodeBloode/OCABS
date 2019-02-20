@@ -23,7 +23,7 @@ public class ConnectionManager {
         
         try{
 
-    //        con = DriverManager.getConnection(url, "root", "console");
+           con = DriverManager.getConnection(url, "root", "");
 
 
             //con = DriverManager.getConnection(url, "root", "@elvis$");

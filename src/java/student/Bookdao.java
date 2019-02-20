@@ -48,7 +48,7 @@ public class Bookdao {
         // sets calendar time/date
         cal.setTime(time);                      
 
-        cal.add(Calendar.HOUR_OF_DAY, sessionTm);
+        cal.add(Calendar.MINUTE, sessionTm);
        
         String endTime = tmformat.format(cal.getTime());
         

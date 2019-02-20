@@ -28,7 +28,7 @@ public class addDatedao {
         
         System.out.println("from bean date "+appDate+" and time "+appTime);
         
-        String search = "select * from counsellor";
+        String search = "SELECT counsNo FROM (SELECT counsNo FROM scheduling WHERE scheduling.approval='no' UNION SELECT counsNo from appointment) counsellor;";
         
         try {
             connection = ConnectionManager.getConnect();
