@@ -89,7 +89,13 @@ body {
 </style>
 
 
-
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#from" ).datepicker();
+  } );
+  </script>
 
    <!-- Font Awesome -->
   
@@ -117,9 +123,9 @@ body {
         <ul class="navbar-nav ml-auto">
             
           
-         <li class="nav-item">
+<!--         <li class="nav-item">
                 <a class="nav-link active" href="" style="color: white">Print Schedules</a>
-            </li>
+            </li>-->
             <!--
             <li class="nav-item">
                 <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
@@ -129,7 +135,7 @@ body {
             </li>>-->
             
             <li class="nav-item">
-                <a  class="nav-link" href="../logout.jsp" style="color: white"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
+                <a  class="nav-link" href="logout.jsp" style="color: white"><i class="fa fa-power-off" style="font-size:20px"></i> logout</a>
             </li>  </ul>
       
     </nav>
@@ -139,23 +145,11 @@ body {
 </h4>
 <div style="margin-left:500px; margin-top: 50px">
     <form action="#" method="get">
-      Filter By:  <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
+      Filter By:  <input type="text" id= "from" name="from" placeholder="From" autocomplete="off" maxlength="10">
         
-        <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
+        <input type="text" name="to" placeholder="To" id="to" autocomplete="off" maxlength="10">
     <script type="text/javascript">
 
-$(document).ready(function(){
-
-
-    $("#to").datepicker({
-        numberOfMonth:1,
-        format: 'yyyy/mm/dd',
-        todayHighlight:true,
-        autoclose:true,
-
-    });
-
-})
     </script>
         <button type="submit" name="get"><span>Search <img src="images/search.png" title="" alt="" height="17" width="17" /></span></button>
     </form>

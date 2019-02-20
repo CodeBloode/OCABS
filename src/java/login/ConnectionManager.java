@@ -23,7 +23,11 @@ public class ConnectionManager {
         
         try{
 
+<<<<<<< HEAD
+          con = DriverManager.getConnection(url, "root", "Alex1234");
+=======
            con = DriverManager.getConnection(url, "root", "");
+>>>>>>> 1978280cb216832494ca1c5f32d062b340ab7d7f
 
 
             //con = DriverManager.getConnection(url, "root", "@elvis$");
