@@ -35,8 +35,8 @@ public class booking extends HttpServlet {
        String studentReg = session.getAttribute("userSession1").toString();
        String counselor = request.getParameter("counse");
        
-       String appointmentDate = "2019-02-14";//request.getAttribute("appDate").toString();
-       String appointmentTime = "08:00:01";//request.getAttribute("appTime").toString();
+       String appointmentDate = session.getAttribute("dateofappointment").toString();
+       String appointmentTime = session.getAttribute("timeofappointment").toString();
        
        BookBean bk = new BookBean();
        
