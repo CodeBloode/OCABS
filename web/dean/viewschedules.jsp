@@ -1,35 +1,25 @@
 <%-- 
-    Document   : adduserForm
-    Created on : Jan 19, 2019, 12:43:38 PM
+    Document   : approveschedules
+    Created on : Jan 16, 2019, 8:12:28 AM
     Author     : Alex
 --%>
-<%@page contentType="text/html" pageEncoding="UTF-8" import="signup.*"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add Counsellor Form</title>
-<!-- SCRIPTS -->
 
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-grid.min.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-reboot.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/bootstrap-reboot.min.css">
-<link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/font-awesome.min.css">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="dean.ApproveSchedulesBean"%>
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        
+        <title>Approve Schedules</title>
+    
              <!-- MDB core JavaScript -->
               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">
 <link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="cdn/buttons.bootstrap.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/buttons.colVis.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/buttons.html5.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/buttons.print.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/dataTables.bootstrap.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/dataTables.buttons.min.js">
 <link rel="stylesheet" type="text/css" href="cdn/jquery-3.3.1.js">
-<link rel="stylesheet" type="text/css" href="cdn/jquery.dataTables.min.js">
 <link rel="stylesheet" type="text/css" href="cdn/jszip.min.js">
 <link rel="stylesheet" type="text/css" href="cdn/mdb.min.js">
 <link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
@@ -109,7 +99,7 @@ body {
         <div class="sidenav">
    <div class="sidenav1">
   <a href="dean/"><i class="fa fa-home" style='font-size:18px'></i> Home</a>
-  <a href="dean/viewsessions.jsp"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
+  <a href="ViewAppointments"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
   <a href="ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
   <a href="CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
   <a href="ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
@@ -127,8 +117,8 @@ body {
         <ul class="navbar-nav ml-auto">
             
           
-            <li class="nav-item">
-                <a class="nav-link active" href="ViewAllCounsellors" style="color: white">View Counsellors</a>
+         <li class="nav-item">
+                <a class="nav-link active" href="" style="color: white">Print Schedules</a>
             </li>
             <!--
             <li class="nav-item">
@@ -144,17 +134,57 @@ body {
       
     </nav>
     </div>
+     <h4 style="margin-left:500px; margin-top: 100px">
+    Approve Schedules 
+</h4>
+<div style="margin-left:500px; margin-top: 50px">
+    <form action="#" method="get">
+      Filter By:  <input type="text" id= "datepicker" name="from" placeholder="From" autocomplete="off" readonly="readonly">
         
-<!--<p style="background-color: lightgreen;">Record successfully saved!</p>-->
-<% String messages = request.getAttribute("ErrorMessage").toString();
-            if(messages.equals(null)){
-                messages = "";
-            }
-        %>
-      <div class="text-danger text-center"><p><%=messages%></p></div>
-<jsp:include page="counsellorForm.jsp"></jsp:include>
-<div class="footer">
+        <input type="text" name="to" placeholder="To" id="to" autocomplete="off" readonly="readonly">
+    <script type="text/javascript">
+
+$(document).ready(function(){
+
+
+    $("#to").datepicker({
+        numberOfMonth:1,
+        format: 'yyyy/mm/dd',
+        todayHighlight:true,
+        autoclose:true,
+
+    });
+
+})
+    </script>
+        <button type="submit" name="get"><span>Search <img src="images/search.png" title="" alt="" height="17" width="17" /></span></button>
+    </form>
+</div>
+     
+    
+     <div>
+     <div style="margin-left:300px; margin-top: 18px; margin-right: 30px">
+         <table border="1" width="80%" style="text-decoration: none" class="table table-bordered">
+             <tr><th>Id</th><th>Counsellor No.</th><th>Date Away</th><th>Time Away</th><th>Date Back</th><th>Time Back</th><th>Reason</th><th>Approved</th><th>Approve</th></tr>
+                    <c:forEach items="${schedules}" var="b">
+                <tr>
+                    <td>${b.schId}</td>
+                    <td>${b.counsNo}</td>
+                    <td>${b.dtaway}</td>
+                    <td>${b.taway}</td>
+                    <td>${b.dtback}</td>
+                    <td>${b.taway}</td>
+                    <td>${b.reason}</td>
+                    <td>${b.approve}</td>
+              
+                   <td><a href="dean/approveschedule.jsp?id=${b.schId}" style="color: green">
+                           Approve <i class="fas fa-check-circle"></i></a></td></tr>
+            </c:forEach>
+        </table>
+     </div>
+      </div>
+<div class="footer fixed-bottom" style="color: #ffffff; background-color: #808080">
        <jsp:include page="../includes/footer.jsp"/>
     </div>
-</body>
+    </body>
 </html>

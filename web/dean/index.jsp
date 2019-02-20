@@ -123,10 +123,10 @@ body {
         <div class="sidenav">
    <div class="sidenav1">
   <a href="index.jsp"><i class="fa fa-home" style='font-size:18px'></i> Home</a>
-  <a href="viewsessions.jsp"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
+  <a href="../ViewAppointments"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
   <a href="../ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
   <a href="../CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
-  <a href="approveschedules.jsp"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
+  <a href="../ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
   <a href="../AboutUs/contact.jsp"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
   <a href="../AboutUs/about.jsp"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
   <div class="change">

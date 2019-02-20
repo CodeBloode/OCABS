@@ -6,6 +6,7 @@
 package dean;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,10 +17,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alex
  */
-public class ViewAllCounsellors extends HttpServlet {
+public class ApproveSchedules extends HttpServlet {
 
-    /**
-     *
+        /**
      * @param request
      * @param response
      * @throws ServletException
@@ -29,11 +29,11 @@ public class ViewAllCounsellors extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        ArrayList<DeanManageCounsellorBean> data =  DeanManageCounsellorDAO.getAllRecords();
+        ArrayList<ApproveSchedulesBean> schs =  ApproveSchedulesDAO.getAllSchedules();
         
-      request.setAttribute("counsellors", data);
-                        System.out.println("obtained records "+data);
-       request.getRequestDispatcher("dean/viewCounsellors.jsp").forward(request, response);
+      request.setAttribute("schedules", schs);
+                        System.out.println("obtained records "+schs);
+       request.getRequestDispatcher("dean/viewschedules.jsp").forward(request, response);
     }
 
     /**
@@ -53,6 +53,6 @@ public class ViewAllCounsellors extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    }
 
 }
