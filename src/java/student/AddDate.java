@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -40,8 +41,10 @@ public class AddDate extends HttpServlet {
        
        dttm.setDt(dt);
        dttm.setTm(tm);
-       
-       ArrayList<addDateBean> counselors = addDatedao.listofCounsellors();
+       HttpSession session = request.getSession(true);
+       session.setAttribute("dateofappointment", dt);
+       session.setAttribute("timeofappointment", tm);
+        ArrayList<addDateBean> counselors = addDatedao.listofCounsellors();
         System.out.println(counselors);
         
         request.setAttribute("counsellors", counselors);
