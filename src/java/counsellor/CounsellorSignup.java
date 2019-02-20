@@ -70,6 +70,8 @@ public class CounsellorSignup extends HttpServlet {
                 user = NewCounsesellorDAO.signup(user);
 
                 if(user.isValid()){
+                    message = "Counsellor Added Successfully ...";
+                    request.setAttribute("ErrorMessage", message);
                    response.sendRedirect("CounsellorSignup?Counsellor Added Successfully");
 
                 }else{

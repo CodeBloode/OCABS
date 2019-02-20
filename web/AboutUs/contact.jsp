@@ -26,16 +26,16 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark probootstrap-navabr-dark">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Contact Us</a>
+          <a class="navbar-brand" href="contact.jsp">Contact Us</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-nav" aria-controls="probootstrap-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="probootstrap-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
-              <li class="nav-item"><a href="#" class="nav-link active">Contact</a></li>
-               <li class="nav-item"><a href="../index.php" class="nav-link">Back</a></li>
+              <li class="nav-item"><a href="about.jsp" class="nav-link">About Us</a></li>
+              <li class="nav-item"><a href="contact.jsp" class="nav-link active">Contact</a></li>
+               <li class="nav-item"><a href="../dean/index.jsp" class="nav-link">Back</a></li>
               
             </ul>
            
