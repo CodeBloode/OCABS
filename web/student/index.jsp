@@ -33,11 +33,7 @@
         <div class="container text-center mt-7" style="margin-top:10%">
              <p class="h4-responsive"> Welcome <%= currentUser.getFirstName() + " " + currentUser.getLastName() %> </p>
         </div>
-           
-           
-       
-         
-         
+        
          <div class="fixed-bottom">
          <jsp:include page="../includes/footer.jsp" />
          </div>

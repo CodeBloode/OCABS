@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author root
  */
-public class Book extends HttpServlet {
+public class booking extends HttpServlet {
     
     String messages="";
     @Override
@@ -30,12 +30,13 @@ public class Book extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        System.out.println("booking servlet runnin....");
        HttpSession session = request.getSession(true);
        String studentReg = session.getAttribute("userSession1").toString();
        String counselor = request.getParameter("counse");
-       String appointmentDate = request.getAttribute("appDate").toString();
-       String appointmentTime = request.getAttribute("appTime").toString();
+       
+       String appointmentDate = "2019-02-14";//request.getAttribute("appDate").toString();
+       String appointmentTime = "08:00:01";//request.getAttribute("appTime").toString();
        
        BookBean bk = new BookBean();
        
@@ -50,12 +51,12 @@ public class Book extends HttpServlet {
            
             messages = "Book sucessful";
             request.setAttribute("messages", messages);                    
-            //response.sendRedirect("Book");
+            response.sendRedirect("studenthome?book successful");
             //request.getRequestDispatcher("book?book successful").forward(request,response);
        }else{
           messages = "Could not make an appointment, please retry..";
           request.setAttribute("messages", messages);
-          response.sendRedirect("AddDate");
+          response.sendRedirect("AddDate?unable to book");
           //request.getRequestDispatcher("student/availableCoun.jsp").forward(request,response); 
        }
     }

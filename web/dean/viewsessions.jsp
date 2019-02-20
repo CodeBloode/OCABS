@@ -139,7 +139,11 @@ body {
       
     </nav>
     </div>
+<<<<<<< HEAD
+        <div style="height:auto; width: auto; margin-top: 120px" class=" text-center">
+=======
         <!--<div style="height:auto; width: auto; margin-top: 120px" class=" text-center;">-->
+>>>>>>> 2e32bc37f82d9b21080672ed71766f5dbdacd1e6
         <div class="flex-center flex-column" >
 <!-- <div class="container" style="margin-top: 120px "> -->
 

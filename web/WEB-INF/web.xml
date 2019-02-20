@@ -46,8 +46,8 @@
         <servlet-class>counsellor.DateManipulationServ</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Book</servlet-name>
-        <servlet-class>student.Book</servlet-class>
+        <servlet-name>booking</servlet-name>
+        <servlet-class>student.booking</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ApproveSchedules</servlet-name>
@@ -164,8 +164,9 @@
         <url-pattern>/DateManipulationServ</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Book</servlet-name>
-        <url-pattern>/book</url-pattern>
+
+        <servlet-name>booking</servlet-name>
+        <url-pattern>/booking</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ApproveSchedules</servlet-name>
