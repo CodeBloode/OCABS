@@ -157,7 +157,7 @@ body {
         </ul>
     </nav>
     </div>
-        <div style="height:auto; width: auto; margin-top: 120px" class=" text-center;">
+        <div style="height:auto; width: auto; margin-top: 120px" class=" text-center">
         <div class="flex-center flex-column" >
 <!-- <div class="container" style="margin-top: 120px "> -->
 
