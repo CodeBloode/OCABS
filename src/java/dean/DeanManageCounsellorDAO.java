@@ -46,18 +46,4 @@ public class DeanManageCounsellorDAO{
         return list;
     }
 
-     public static int delete(DeanManageCounsellorBean u) {
-        int status = 0;
-        try {
-            Connection con = ConnectionManager.getConnect();
-            PreparedStatement ps = con.prepareStatement("delete from counsellor where counsNo=?");
-            
-            ps.setString(1, u.getCounsNo());
-            status = ps.executeUpdate();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-        return status;
     }
-}

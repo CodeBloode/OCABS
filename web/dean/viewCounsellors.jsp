@@ -97,10 +97,10 @@ body {
         <div class="sidenav">
    <div class="sidenav1">
   <a href="dean/"><i class="fa fa-home" style='font-size:18px'></i> Home</a>
-  <a href="dean/viewsessions.jsp"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
+  <a href="ViewAppointments"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
   <a href="ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
   <a href="CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
-  <a href="dean/approveschedules.jsp"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
+  <a href="ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
   <a href="AboutUs/contact.jsp"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
   <a href="AboutUs/about.jsp"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
   <div class="change">
@@ -148,12 +148,12 @@ body {
                     <td>${u.phoneNo}</td>
                     <td>${u.gender}</td>
               
-                   <td><a href="dean/DeleteCounsellor.jsp?counsNo=${u.counsNo}" style="color: maroon">
+                   <td><a href="dean/DeleteCounsellor.jsp?id=${u.counsNo}" style="color: maroon">
                            Delete <i class="fa fa-trash" aria-hidden="true" style="color: #000000"></i></a></td></tr>
             </c:forEach>
         </table>
      </div>
-<div class="footer fixed-bottom">
+<div class="footer fixed-bottom" style="color: #ffffff; background-color: #808080">
        <jsp:include page="../includes/footer.jsp"/>
     </div>
     </body>
