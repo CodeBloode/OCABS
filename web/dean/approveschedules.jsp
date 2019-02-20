@@ -139,9 +139,9 @@ body {
          
             
           
-            <li class="nav-item">
+<!--            <li class="nav-item">
                 <a class="nav-link active" href="awaycounsellors.jsp">Unavalable Counsellors</a>
-            </li>
+            </li>-->
             <!--
             <li class="nav-item">
                 <a class="nav-link" href="viewsessions.jsp"> View Appointments</a>
