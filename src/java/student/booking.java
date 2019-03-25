@@ -51,7 +51,9 @@ public class booking extends HttpServlet {
            
             messages = "Book sucessful";
             request.setAttribute("messages", messages);                    
-            response.sendRedirect("succesBooking?book successful");
+
+            response.sendRedirect("succesBooking");
+
             //request.getRequestDispatcher("book?book successful").forward(request,response);
        }else{
           messages = "Could not make an appointment, please retry..";
