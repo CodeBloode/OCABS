@@ -108,8 +108,8 @@ body {
   <a href="ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
   <a href="CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
   <a href="ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
-  <a href="AboutUs/contact.jsp"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
-  <a href="AboutUs/about.jsp"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
+  <a href="#"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
+  <a href="#"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
   <div class="change">
   <a href="dean/changepassword.jsp" style=" font-style: italic"><i class="fas fa-key" style='font-size:18px'></i> Change Your Password ?</a>
   </div>
@@ -139,11 +139,9 @@ body {
       
     </nav>
     </div>
-<<<<<<< HEAD
-        <div style="height:auto; width: auto; margin-top: 120px" class=" text-center">
-=======
-        <!--<div style="height:auto; width: auto; margin-top: 120px" class=" text-center;">-->
->>>>>>> 2e32bc37f82d9b21080672ed71766f5dbdacd1e6
+
+
+
         <div class="flex-center flex-column" >
 <!-- <div class="container" style="margin-top: 120px "> -->
 
