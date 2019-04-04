@@ -35,16 +35,25 @@ public class AddDate extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-       addDateBean dttm = new addDateBean();
+      
+        System.out.println("Servlet running .....");
        String dt = request.getParameter("date");
-       String tm = request.getParameter("time");
+       String tm = request.getParameter("apptime");
        
+        addDateBean dttm = new addDateBean(dt, tm);
+        System.out.println("time from form "+ tm);
+        System.out.println("date form form "+dt);
+        
        dttm.setDt(dt);
        dttm.setTm(tm);
+       
+        System.out.println("Date from Bean"+ dttm.getDt());
+        System.out.println("Time from Bean"+ dttm.getTm());
+        
        HttpSession session = request.getSession(true);
        session.setAttribute("dateofappointment", dt);
        session.setAttribute("timeofappointment", tm);
-        ArrayList<addDateBean> counselors = addDatedao.listofCounsellors();
+        ArrayList<addDateBean> counselors = addDatedao.listofCounsellors(dt,tm);
         System.out.println(counselors);
         
         request.setAttribute("counsellors", counselors);

@@ -82,13 +82,13 @@ and open the template in the editor.
                    </small>
 
                         <div class="form-group">
-                                     <label for="counsno2" class="font-weight-bolder"> Status </label>
+<!--                                     <label for="counsno2" class="font-weight-bolder"> Status </label>
                                      <select class="custom-select mr-sm-2" id="counsno2" name="state">
                                         <option value="null" selected>--NONE--</option>
                                             <option>Unknown</option>
                                             <option>Available</option>
                                             <option>Not Available</option>
-                                      </select>
+                                      </select>-->
                                 </div>
 
                     <!-- Sign up button -->

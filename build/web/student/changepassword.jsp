@@ -6,31 +6,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-<<<<<<< HEAD
-        <title>student</title>
-=======
         <title>Student|Change password</title>
->>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Font Awesome -->
+<!--         Font Awesome 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-        <!-- Bootstrap core CSS -->
+         Bootstrap core CSS 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
+         Material Design Bootstrap 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">-->
+  
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/css/mdb.min.css" rel="stylesheet">
+        
+        
+        
+        
+        
+        <link href="MDB/css/mdtimepicker.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="MDB/css/mdtimepicker.css" rel="stylesheet" type="text/css"/>
+        <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      
+        
+        
+        
+        
+                  <!--Javascript--> 
+                  <!--JQuery--> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+                  <!--Bootstrap core JavaScript--> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+                  <!--MDB core JavaScript--> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/js/mdb.min.js"></script>
+        
+            
 
     </head>
     <body>
         <jsp:include page="../includes/authenticatednav.html"/>
         <br><br><br><br>
-<<<<<<< HEAD
-        <div class="container">
-=======
-        <div class="container col-md-6 offset-3">
->>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
-      
-           
+        <div class="container col-md-6 offset-3">     
      
          <form action="changepassword" class="border border-light p-5" Method="post" name="form">
                 

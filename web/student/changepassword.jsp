@@ -48,9 +48,7 @@
     <body>
         <jsp:include page="../includes/authenticatednav.html"/>
         <br><br><br><br>
-        <div class="container col-md-6 offset-3">
-      
-           
+        <div class="container col-md-6 offset-3">     
      
          <form action="changepassword" class="border border-light p-5" Method="post" name="form">
                 

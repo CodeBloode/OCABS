@@ -9,7 +9,6 @@ package counsellor;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.sql.*;
 import java.sql.*;
 import java.util.*;
 import java.util.logging.Level;
@@ -25,6 +24,7 @@ public class Search extends HttpServlet {
     static ResultSet rs = null;
     static Connection connection = null;
     
+    @Override
    protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
        
        request.getRequestDispatcher("counsellor/viewapp.jsp").forward(request, response);
@@ -33,6 +33,7 @@ public class Search extends HttpServlet {
         
     }
    
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -86,9 +87,7 @@ public class Search extends HttpServlet {
             
                        
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
         }
        
@@ -97,7 +96,7 @@ public class Search extends HttpServlet {
             if(rs != null){
                 try{
                     rs.close();
-                }catch(Exception e1){
+                }catch(SQLException e1){
                     rs = null;
                 }
             }
@@ -105,7 +104,7 @@ public class Search extends HttpServlet {
             if(stmt != null){
                 try{
                     stmt.close();
-                }catch(Exception e1){
+                }catch(SQLException e1){
                     stmt = null;
                 }
             }

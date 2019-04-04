@@ -22,23 +22,16 @@
         <servlet-class>supportservlet.studenthome</servlet-class>
     </servlet>
     <servlet>
-      <servlet-name>AddDate</servlet-name>
+        <servlet-name>AddDate</servlet-name>
         <servlet-class>student.AddDate</servlet-class>
     </servlet>
-    
     <servlet>
-
         <servlet-name>CounsellorSetSechedule</servlet-name>
         <servlet-class>counsellor.CounsellorSetSechedule</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>Search</servlet-name>
         <servlet-class>counsellor.Search</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletDAO</servlet-name>
-        <servlet-class>counsellor.ServletDAO</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>searchView</servlet-name>
@@ -49,11 +42,20 @@
         <servlet-class>profile.studentprofile</servlet-class>
     </servlet>
     <servlet>
-
         <servlet-name>DateManipulationServ</servlet-name>
         <servlet-class>counsellor.DateManipulationServ</servlet-class>
-        <servlet-name>Book</servlet-name>
-        <servlet-class>student.Book</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>booking</servlet-name>
+        <servlet-class>student.booking</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ApproveSchedules</servlet-name>
+        <servlet-class>dean.ApproveSchedules</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>succesBooking</servlet-name>
+        <servlet-class>supportservlet.succesBooking</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -86,10 +88,6 @@
     <servlet-mapping>
         <servlet-name>Search</servlet-name>
         <url-pattern>/Search</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletDAO</servlet-name>
-        <url-pattern>/ServletDAO</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>searchView</servlet-name>
@@ -152,10 +150,8 @@
     <servlet-mapping>
         <servlet-name>ViewAllCounsellors</servlet-name>
         <url-pattern>/ViewAllCounsellors</url-pattern>
-
     </servlet-mapping>
-
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>deanhome</servlet-name>
         <url-pattern>/deanhome</url-pattern>
     </servlet-mapping>
@@ -168,11 +164,20 @@
         <url-pattern>/studentprofile</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-
         <servlet-name>DateManipulationServ</servlet-name>
         <url-pattern>/DateManipulationServ</url-pattern>
-        <servlet-name>Book</servlet-name>
-        <url-pattern>/book</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>booking</servlet-name>
+        <url-pattern>/booking</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ApproveSchedules</servlet-name>
+        <url-pattern>/ApproveSchedules</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>succesBooking</servlet-name>
+        <url-pattern>/succesBooking</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

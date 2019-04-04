@@ -43,12 +43,12 @@ public static SetSecheduleBean setSechedule(SetSecheduleBean bn) throws ClassNot
         Date time = null;
         
         try {
-        time = tmformat.parse(timeaway);
-        date = dtformat.parse(dtaway);
-    } catch (ParseException e) {
-        e.printStackTrace();
-    }
-        String formattedTime = tmformat.format(time);
+                time = tmformat.parse(timeaway);
+                date = dtformat.parse(dtaway);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+                String formattedTime = tmformat.format(time);
         String formatteddate = dtformat.format(date);
         
         org.joda.time.format.DateTimeFormatter formatter = org.joda.time.format.DateTimeFormat.forPattern( "yyyy-MM-dd" );

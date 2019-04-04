@@ -32,8 +32,7 @@ public class login extends HttpServlet {
  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
+            throws ServletException, IOException {       
       
        
         try{
@@ -80,7 +79,7 @@ public class login extends HttpServlet {
                    
                     
                     if(request.getParameter("user").equals("student")){
-                          response.sendRedirect("studenthome?logged in as student");
+                          response.sendRedirect("studenthome?welcome");
                         }else
                             if(request.getParameter("user").equals("counsellor")){
                                response.sendRedirect("counsellor/");
@@ -109,10 +108,12 @@ public class login extends HttpServlet {
                     messages = "select user as Student, Dean or Counselor";
                     request.setAttribute("messages", messages);
                     response.sendRedirect("login");
+                    //messages="";
                 }else{
                     messages = "Trying to log in as incorrect user or username or password incorrect please retry";
                     request.setAttribute("messages", messages);
                     response.sendRedirect("login?Error");
+                   // messages="";
                 }
                     
             }

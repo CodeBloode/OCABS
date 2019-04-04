@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/root/NetBeansProjects/Class/OCABS/web/includes/counsnav.html</file>
-            <file>file:/root/NetBeansProjects/Class/OCABS/web/META-INF/context.xml</file>
-            <file>file:/root/NetBeansProjects/Class/OCABS/web/counsellor/setsech.jsp</file>
-            <file>file:/root/NetBeansProjects/Class/OCABS/web/WEB-INF/web.xml</file>
+            <file>file:/root/NetBeansProjects/OCABS/web/student/studentBooking.jsp</file>
+            <file>file:/root/NetBeansProjects/OCABS/src/java/student/addDatedao.java</file>
+            <file>file:/root/NetBeansProjects/OCABS/src/java/login/login.java</file>
+            <file>file:/root/NetBeansProjects/OCABS/src/java/counsellor/ScheduleDAO.java</file>
+            <file>file:/root/NetBeansProjects/OCABS/src/java/student/AddDate.java</file>
         </group>
     </open-files>
 </project-private>

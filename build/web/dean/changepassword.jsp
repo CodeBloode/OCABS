@@ -20,54 +20,8 @@
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/font-awesome.min.css">
              <!-- MDB core JavaScript -->
 <link rel="stylesheet" type="text/css" href="../bootstrap1/bootstrapcss/mdb.min.css">
-<link rel="stylesheet" type="text/css" href="cdn/all.css">
-<link rel="stylesheet" type="text/css" href="cdn/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="cdn/buttons.bootstrap.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/buttons.colVis.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/buttons.html5.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/buttons.print.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/dataTables.bootstrap.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/dataTables.buttons.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/jquery-3.3.1.js">
-<link rel="stylesheet" type="text/css" href="cdn/jquery.dataTables.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/jszip.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/mdb.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/pdfmake.min.js">
-<link rel="stylesheet" type="text/css" href="cdn/vfs_fonts.js">
-<style> 
-            #navigation ul li{
-                display: inline-block;
-                padding: 0px 5px;
-            }
-            #navigation ul li a{
-                color:#fff;
-                text-decoration: none;
-            }
-            #navigation {
-                background: #4062b7;
-                padding: 3px 0px
-            }
-        </style>
-
-    </head>
-    <body>
-<div id="header">
-            <div class="shell">
-
-<<<<<<< HEAD
-                <div id="navigation">
-                    <ul>
-                        <li><a href="index.jsp" class="active">Home</a></li>
-                        <li><a href="../ViewAllCounsellors">View All Counsellors</a></li>
-                        <li><a href="../CounsellorSignup">Add New Counsellor</a></li>
 
 
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-=======
     <link  rel="stylesheet" href="../css/stylelogin.css" type="text/css" media="all"> 
 
             <!-- Material Design Bootstrap -->
@@ -160,12 +114,12 @@ body {
         <div class="sidenav">
    <div class="sidenav1">
   <a href="index.jsp"><i class="fa fa-home" style='font-size:18px'></i> Home</a>
-  <a href="viewsessions.jsp"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
+  <a href="../ViewAppointments"><i class="fas fa-eye" style='font-size:18px'></i> View Appointments</a>
   <a href="../ViewAllCounsellors"><i class="fas fa-eye" style='font-size:18px'></i> View Counsellors</a>
   <a href="../CounsellorSignup"><i class="fas fa-user-plus" style='font-size:18px'></i> Add Counsellor</a>
-  <a href="approveschedules.jsp"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
-  <a href="../AboutUs/contact.jsp"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
-  <a href="../AboutUs/about.jsp"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
+  <a href="../ApproveSchedules"><i class='far fa-edit' style='font-size:18px'></i> Approve Schedules</a>
+  <a href="#"><i class="fas fa-address-book" style='font-size:18px'></i> Contact Us</a>
+  <a href="#"><i <i class="fas fa-users" style='font-size:18px'></i> About Us</a>
   <div class="change">
   <a href="changepassword.jsp" style=" font-style: italic"><i class="fas fa-key" style='font-size:18px'></i> Change Your Password ?</a>
   </div>
@@ -195,7 +149,6 @@ body {
       
     </nav>
     </div>
->>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
  
 <div style="margin-left: 500px; margin-top: 100px">
 <h3>Dean Password Change.</h3>
@@ -211,15 +164,8 @@ body {
             <input type="submit" name="change" value="Change Password">
         </form>
     </div>
-<<<<<<< HEAD
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <div class="footer">
-           <jsp:include page="../includes/footer.jsp"/> 
-        </div>
-=======
       <div class="footer fixed-bottom">
        <jsp:include page="../includes/footer.jsp"/>
     </div>
->>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
     </body>
     </html>

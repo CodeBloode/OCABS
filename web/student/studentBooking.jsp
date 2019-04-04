@@ -83,7 +83,7 @@
                  </div>
                 <div class="form-group">
                   <label for="duration" class="text-left font-weight-bolder">Time</label>
-                  <input type="text" class="form-control" id="timepicker" readonly="readonly" name="time">
+                  <input type="text" class="form-control" id="timepicker" readonly="readonly" name="apptime">
                 </div>
                                 
                 <button type="submit" class="btn btn-primary">Next</button>

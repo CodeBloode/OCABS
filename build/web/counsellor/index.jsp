@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-<<<<<<< HEAD
                    <!--css-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
@@ -48,23 +47,42 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
          <script src="MDB/js/mdtimepicker.js"></script>
          <script src="MDB/js/mdtimepicker.min.js"></script>
-=======
->>>>>>> f62671d8b8910ce51639cd5790c9745a6c0be378
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Counsellor Home</title>
     </head>
     <body>
-        <div>
-            <jsp:include page="../includes/counsnav.html"/>
-        </div>
-        <div style="margin-top: 50px;">
+           <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="background-color: #4062b7">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.jsp">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../Search">View Appointments</a>
+      </li>
+      <li class="nav-item">
+
+        <a class="nav-link" href="../DateManipulationServ">Set Schedule</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../logout">Logout</a>
+      </li>
+     
+    </ul>
+  </div>
+</nav>  
+         <div class="container text-center mt-7" style="margin-top:10%">
          <% UserBean currentUser = ((UserBean)(session.getAttribute("userSession")));%>
-        <h1> Welcome <%= currentUser.getFullName()%> </h1> 
+        <p class="h4-responsive"> Welcome <%= currentUser.getFullName()%> </p>
         
         </div>
-        <div class="fixed-bottom">
-     <jsp:include page="../includes/footer.jsp"/>
-     </div>
+        <div class="footer fixed-bottom">
+       <jsp:include page="../includes/counselorfooter.jsp"/>
+    </div>
     </body>
     
 </html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

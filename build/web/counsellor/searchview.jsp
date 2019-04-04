@@ -47,7 +47,7 @@
         </tr>
         
         <c:forEach items="${viewdetails}" var="data">
-           
+            
         <tr style="background-color:#F9EBB3">
                 <td>${data.counselor}</td>
                 <td>${data.stident}</td>
@@ -60,8 +60,8 @@
         ${data}
         
         </table>
-        <div class="footer">
-    <jsp:include page="../includes/footer.jsp"/>
+       <div class="footer fixed-bottom">
+       <jsp:include page="../includes/counselorfooter.jsp"/>
     </div>
             </body>
         </html>

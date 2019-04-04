@@ -19,13 +19,21 @@ public class addDateBean {
         this.cn = cn;
     }
     
-    public addDateBean() {
+    public addDateBean(String dt, String tm) {
+        this.dt = dt;
+        this.tm = tm;
+        System.out.println("Bean class has been initialized to set Parameters");
+    }
+    
+    public addDateBean(){
+        System.out.println("Bean Class has been initialized to get Parameters");
     }
 
     public addDateBean(String cn) {
         this.cn = cn;
     }
     
+   
     
     public String getDt() {
         return dt;
